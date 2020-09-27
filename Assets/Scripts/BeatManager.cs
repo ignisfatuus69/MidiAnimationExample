@@ -23,18 +23,29 @@ public class BeatManager : MonoBehaviour
     //Only for Clicking
     public void CheckForState(Beat BeatObj)
     {
-     //   if (BeatObj.Status == BeatState.Missed) 
+        if (BeatObj.Status == BeatState.Missed)
+        {
+            //Switch animations adn shit
+            //automatically gets pooled afterwards so no need to pool
+            BeatObj.EVT_OnMissedState.Invoke();
+            return;
+        }
 
-     //   EVT_OnDeactivateBeat.Invoke(BeatObj);
+
         if (BeatObj.Status == BeatState.Okay)
         {
+            BeatObj.EVT_OnOkayState.Invoke();
             PlayerObj.Score += OkayScore;
+  
+            EVT_OnDeactivateBeat.Invoke(BeatObj);
 
         }
         if (BeatObj.Status == BeatState.Perfect)
         {
-
+            BeatObj.EVT_OnPerfectState.Invoke();
             PlayerObj.Score += PerfectScore;
+
+              EVT_OnDeactivateBeat.Invoke(BeatObj);
         }
     }
 

@@ -32,31 +32,32 @@ public class Beat : MonoBehaviour
     private void OnEnable()
     {
         ScoreValue = 0;
-        BeatAnimator.Play("BeatAnimation", -1,  0.0f);
+        BeatAnimator.enabled = true;
 
     }
 
     private void ActivateMissedState()
     {
-        EVT_OnMissedState.Invoke();
+  
         Status = BeatState.Missed;
     }
 
     private void ActivateOkayState()
     {
-        EVT_OnOkayState.Invoke();
+ 
         Status = BeatState.Okay;
     }
 
     private void ActivatePerfectState()
     {
-        EVT_OnOkayState.Invoke();
+
         Status = BeatState.Perfect;
     }
 
     private void ActivateEndState()
     {
         EVT_OnEndState.Invoke(this);
+
         Status = BeatState.End;
     }
 

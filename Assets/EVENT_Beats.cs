@@ -23,10 +23,10 @@ public class EVENT_Beats : MonoBehaviour
     void MissedBeats()
     {
 
-     //   BeatCollider.enabled = false;
-     ////   BeatAnimator.SetTrigger("Missed");
-     //   BeatSpriteRenderer.color = new Color(100, 100, 100, 135);
-        
+        BeatCollider.enabled = false;
+        BeatAnimator.SetTrigger("Missed");
+        BeatSpriteRenderer.color = new Color(100, 100, 100, 135);
+
     }
     
 }

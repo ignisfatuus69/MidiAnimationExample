@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class BeatSpawner : ObjectPooler
 {
-    public Player PlayerObj;
+
     public BeatManager BeatManagerObj;
     void Start()
     {
-        StartCoroutine(SpawnTask());
-        PlayerObj.EVT_OnBeatClicked.AddListener(OnDeactivate);
+        SpawnObject();
+        SpawnObject();
+        SpawnObject();
+        SpawnObject();
+        SpawnObject();
+
 
     }
     protected override void RemoveSpawn(GameObject obj)
@@ -31,7 +35,7 @@ public class BeatSpawner : ObjectPooler
         BeatToDespawn.gameObject.SetActive(false);
         pooledObjects.Add(BeatToDespawn.gameObject);
         BeatToDespawn.EVT_OnEndState.RemoveListener(OnDeactivate);
-
+        BeatToDespawn.GetComponent<Animator>().enabled = false;
         BeatManagerObj.EVT_OnDeactivateBeat.RemoveListener(OnDeactivate);
 
 

@@ -42,9 +42,8 @@ public class Player : MonoBehaviour
                 
                 Beat BeatHit = hit.transform.gameObject.GetComponent<Beat>();
                 BeatGameObj = BeatHit;
-                BeatGameObj.gameObject.SetActive(false);
                 EVT_OnBeatClicked.Invoke(BeatHit);
-                Debug.Log("clicked once");
+                Debug.Log(BeatGameObj.Status);
             }
 
 

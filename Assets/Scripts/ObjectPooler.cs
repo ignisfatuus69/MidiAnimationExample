@@ -14,19 +14,15 @@ public abstract class ObjectPooler : MonoBehaviour
 
 
 
-	protected IEnumerator SpawnTask()
+	public void SpawnObject()
 	{
-		while (true)
-		{
-			// Wait for spawn interval
-			yield return new WaitForSeconds(SpawnInterval);
-
+	
 			for (int i = 0; i < SpawnCount; i++)
 			{
 
 				// Spawn the object. If we have an object in the pool, use that instead. Else, instantiate.
 				GameObject obj;
-				if (pooledObjects.Count > 0)
+				if (pooledObjects.Count >0)
 				{
 					obj = pooledObjects[0];
 					pooledObjects.RemoveAt(0);
@@ -50,7 +46,7 @@ public abstract class ObjectPooler : MonoBehaviour
 
 			}
 
-		}
+		
 	}
 
 	protected abstract void RemoveSpawn(GameObject obj);
