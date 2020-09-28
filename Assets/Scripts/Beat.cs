@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+//Events are based on the state
 [System.Serializable]
 public class OnOkayState : UnityEvent { };
 [System.Serializable]
-public class OnMissedState : UnityEvent { };
+public class OnEarlyState : UnityEvent { };
 [System.Serializable]
 public class OnPerfectState : UnityEvent { };
 [System.Serializable]
+public class OnLateState : UnityEvent { };
+[System.Serializable]
 public class OnEndState : UnityEvent <Beat> { };
-public enum BeatState { Missed, Okay, Perfect,End };
+
+public enum BeatState { Early, Okay, Perfect,Late,End };
 public class Beat : MonoBehaviour
 {
 
     public Animator BeatAnimator;
-    public OnMissedState EVT_OnMissedState;
+    public OnEarlyState EVT_OnEarlyState;
     public OnOkayState EVT_OnOkayState;
     public OnPerfectState EVT_OnPerfectState;
+    public OnLateState EVT_OnLateState;
     public OnEndState EVT_OnEndState;
     public BeatState Status { get; private set; }
     public int ScoreValue { get; private set; }
@@ -36,10 +41,9 @@ public class Beat : MonoBehaviour
 
     }
 
-    private void ActivateMissedState()
+    private void ActivateEarlyState()
     {
-  
-        Status = BeatState.Missed;
+        Status = BeatState.Early;
     }
 
     private void ActivateOkayState()
@@ -54,10 +58,15 @@ public class Beat : MonoBehaviour
         Status = BeatState.Perfect;
     }
 
+    private void ActivateLateState()
+    {
+        EVT_OnLateState.Invoke();
+        Status = BeatState.Late;
+    }
+
     private void ActivateEndState()
     {
         EVT_OnEndState.Invoke(this);
-
         Status = BeatState.End;
     }
 

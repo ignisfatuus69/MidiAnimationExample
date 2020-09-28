@@ -4,31 +4,30 @@ using UnityEngine;
 
 public class BeatSpawner : ObjectPooler
 {
-
+    public Vector3[] RandomBeatPositions;
     public BeatManager BeatManagerObj;
     void Start()
     {
-        SpawnObject();
-        SpawnObject();
-        SpawnObject();
-        SpawnObject();
-        SpawnObject();
+       // Spawn Objects before hand as extra objects
+        for (int i = 0; i < 5; i++)
+        {
+            SpawnObjects();
+        }
 
 
     }
-    protected override void RemoveSpawn(GameObject obj)
+    protected override void InitializedRemovingSpawn(GameObject obj)
     {
         //add for automatic pooling
         Beat BeatObj = obj.GetComponent<Beat>();
         BeatObj.EVT_OnEndState.AddListener(OnDeactivate);
-
+        //not sure about this pare
+     //   BeatObj.EVT_OnLateState.AddListener(BeatManagerObj.EVT_OnLateBeat.Invoke);
         //add for manual pooling
         BeatManagerObj.EVT_OnDeactivateBeat.AddListener(OnDeactivate);
-
-
     }
 
-    void OnDeactivate(Beat BeatToDespawn)
+    private void OnDeactivate(Beat BeatToDespawn)
     {
   
         // Remove the beats
@@ -37,9 +36,14 @@ public class BeatSpawner : ObjectPooler
         BeatToDespawn.EVT_OnEndState.RemoveListener(OnDeactivate);
         BeatToDespawn.GetComponent<Animator>().enabled = false;
         BeatManagerObj.EVT_OnDeactivateBeat.RemoveListener(OnDeactivate);
-
-
+     //   BeatToDespawn.EVT_OnLateState.RemoveListener(BeatManagerObj.EVT_OnEarlyBeat.Invoke);
         currentSpawn.Remove(BeatToDespawn.gameObject);
 
+    }
+
+    public void RandomizeBeatPosition()
+    {
+        int randomNumber = Random.Range(0, RandomBeatPositions.Length);
+        SpawnPosition = RandomBeatPositions[randomNumber];
     }
 }

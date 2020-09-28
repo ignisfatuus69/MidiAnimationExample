@@ -1,22 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
+[System.Serializable]
+public class OnObjectPooled : UnityEvent { };
+
+[System.Serializable]
+public class OnObjectSpawned : UnityEvent { };
 public abstract class ObjectPooler : MonoBehaviour
 {
+	public OnObjectSpawned EVT_OnObjectSpawned;
+	public OnObjectPooled EVT_OnObjectPooled;
 	public GameObject ObjectToSpawn;
 	public float SpawnInterval = 1.0f;
 	public int SpawnCount = 1;
 	public float Radius = 5.0f;
 
-	public List<GameObject> currentSpawn = new List<GameObject>();
+	protected List<GameObject> currentSpawn = new List<GameObject>();
+
 	protected List<GameObject> pooledObjects = new List<GameObject>();
+	public Vector3 SpawnPosition;
 
 
-
-	public void SpawnObject()
+	public void SpawnObjects()
 	{
-	
 			for (int i = 0; i < SpawnCount; i++)
 			{
 
@@ -28,28 +36,23 @@ public abstract class ObjectPooler : MonoBehaviour
 					pooledObjects.RemoveAt(0);
 					obj.SetActive(true);
 					currentSpawn.Add(obj);
+					EVT_OnObjectSpawned.Invoke();
 				}
 				else
 				{
 					obj = Instantiate(ObjectToSpawn);
 					currentSpawn.Add(obj);
+					EVT_OnObjectSpawned.Invoke();
 				}
 
-				float X = Random.Range(-7, 7);
-				float y = Random.Range(-3.5f, 3.5f);
-				// Randomize position
-				obj.transform.position = new Vector3(X, y, -1);
+			// Randomize position
+			obj.transform.position = SpawnPosition;
 
-			
-				RemoveSpawn(obj);
-			
-
+				InitializedRemovingSpawn(obj);
 			}
-
-		
 	}
 
-	protected abstract void RemoveSpawn(GameObject obj);
+	protected abstract void InitializedRemovingSpawn(GameObject obj);
 
 	
 }

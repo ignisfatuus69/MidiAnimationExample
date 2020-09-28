@@ -11,7 +11,7 @@ public class EVENT_Beats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BeatObj.EVT_OnMissedState.AddListener(MissedBeats);
+        BeatObj.EVT_OnEarlyState.AddListener(MissedBeats);
     }
 
     private void OnEnable()
