@@ -9,10 +9,10 @@ public class BeatSpawner : ObjectPooler
     void Start()
     {
        // Spawn Objects before hand as extra objects
-        for (int i = 0; i < 5; i++)
-        {
-            SpawnObjects();
-        }
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    SpawnObjects();
+        //}
 
 
     }
@@ -22,7 +22,7 @@ public class BeatSpawner : ObjectPooler
         Beat BeatObj = obj.GetComponent<Beat>();
         BeatObj.EVT_OnEndState.AddListener(OnDeactivate);
         //not sure about this pare
-     //   BeatObj.EVT_OnLateState.AddListener(BeatManagerObj.EVT_OnLateBeat.Invoke);
+        BeatObj.EVT_OnLateState.AddListener(BeatManagerObj.EVT_OnLateBeat.Invoke);
         //add for manual pooling
         BeatManagerObj.EVT_OnDeactivateBeat.AddListener(OnDeactivate);
     }
@@ -32,13 +32,13 @@ public class BeatSpawner : ObjectPooler
   
         // Remove the beats
         BeatToDespawn.gameObject.SetActive(false);
-        pooledObjects.Add(BeatToDespawn.gameObject);
-        BeatToDespawn.EVT_OnEndState.RemoveListener(OnDeactivate);
+        BeatToDespawn.EVT_OnLateState.RemoveListener(BeatManagerObj.EVT_OnLateBeat.Invoke);
+     
         BeatToDespawn.GetComponent<Animator>().enabled = false;
         BeatManagerObj.EVT_OnDeactivateBeat.RemoveListener(OnDeactivate);
-     //   BeatToDespawn.EVT_OnLateState.RemoveListener(BeatManagerObj.EVT_OnEarlyBeat.Invoke);
+        pooledObjects.Add(BeatToDespawn.gameObject);
         currentSpawn.Remove(BeatToDespawn.gameObject);
-
+        BeatToDespawn.EVT_OnEndState.RemoveListener(OnDeactivate);
     }
 
     public void RandomizeBeatPosition()

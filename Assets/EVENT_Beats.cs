@@ -20,6 +20,10 @@ public class EVENT_Beats : MonoBehaviour
         BeatSpriteRenderer.color = Color.white;
     }
 
+    private void OnDisable()
+    {
+        
+    }
     void MissedBeats()
     {
 
