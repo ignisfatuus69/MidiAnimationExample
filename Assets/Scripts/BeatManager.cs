@@ -48,7 +48,6 @@ public class BeatManager : MonoBehaviour
         {
             BeatObj.EVT_OnOkayState.Invoke();
             EVT_OnOkayBeat.Invoke();
-            PlayerObj.Score += OkayScore;
             EVT_OnDeactivateBeat.Invoke(BeatObj);
 
         }
@@ -56,7 +55,6 @@ public class BeatManager : MonoBehaviour
         {
             BeatObj.EVT_OnPerfectState.Invoke();
             EVT_OnPerfectBeat.Invoke();
-            PlayerObj.Score += PerfectScore;
             EVT_OnDeactivateBeat.Invoke(BeatObj);
         }
     }
