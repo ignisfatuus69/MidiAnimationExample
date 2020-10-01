@@ -23,7 +23,7 @@ public class BeatManager : MonoBehaviour
     public OnEarlyBeat EVT_OnEarlyBeat;
     public OnDeactivateBeat EVT_OnDeactivateBeat;
     public OnLateBeat EVT_OnLateBeat;
-    public Player PlayerObj;
+    public BeatClicker PlayerObj;
     public int OkayScore;
     public int PerfectScore;
 

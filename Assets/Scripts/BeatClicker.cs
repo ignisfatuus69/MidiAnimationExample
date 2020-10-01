@@ -6,34 +6,23 @@ using UnityEngine.Events;
 [System.Serializable]
 public class OnBeatClicked : UnityEvent<Beat> { };
 
-public class Player : MonoBehaviour
+public class BeatClicker : MonoBehaviour
 {
     public OnBeatClicked EVT_OnBeatClicked;
-    public Beat BeatGameObj;
-    public int Score;
-    public ObjectPooler BeatSpawner;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        DeleteBeat();
+        ClickBeat();
     }
 
  
-    void DeleteBeat()
+    void ClickBeat()
     {
         if (Input.GetMouseButtonDown(0))
         {
             var v3 = Input.mousePosition;
             v3.z = -10;
             Ray ray = Camera.main.ScreenPointToRay(v3);
-
-
  
             RaycastHit hit;
             Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
@@ -41,12 +30,8 @@ public class Player : MonoBehaviour
             {
                 
                 Beat BeatHit = hit.transform.gameObject.GetComponent<Beat>();
-                BeatGameObj = BeatHit;
                 EVT_OnBeatClicked.Invoke(BeatHit);
-                Debug.Log(BeatGameObj.Status);
             }
-
-
         }
     }
 
