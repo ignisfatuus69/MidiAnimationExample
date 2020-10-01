@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,7 +10,7 @@ public class OnDeactivateBeat : UnityEvent <Beat> { };
 [System.Serializable]
 public class OnEarlyBeat : UnityEvent { };
 [System.Serializable]
-public class OnOkayBeat : UnityEvent { };
+public class OnOkayBeat : UnityEvent { internal void AddListener(object v) { throw new NotImplementedException(); } };
 [System.Serializable]
 public class OnPerfectBeat : UnityEvent { };
 

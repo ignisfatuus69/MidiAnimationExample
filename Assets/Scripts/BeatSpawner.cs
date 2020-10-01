@@ -23,6 +23,7 @@ public class BeatSpawner : ObjectPooler
         BeatObj.EVT_OnEndState.AddListener(OnDeactivate);
         //not sure about this pare
         BeatObj.EVT_OnLateState.AddListener(BeatManagerObj.EVT_OnLateBeat.Invoke);
+
         //add for manual pooling
         BeatManagerObj.EVT_OnDeactivateBeat.AddListener(OnDeactivate);
     }
@@ -33,6 +34,7 @@ public class BeatSpawner : ObjectPooler
         // Remove the beats
         BeatToDespawn.gameObject.SetActive(false);
         BeatToDespawn.EVT_OnLateState.RemoveListener(BeatManagerObj.EVT_OnLateBeat.Invoke);
+
      
         BeatToDespawn.GetComponent<Animator>().enabled = false;
         BeatManagerObj.EVT_OnDeactivateBeat.RemoveListener(OnDeactivate);
