@@ -18,6 +18,7 @@ public class OnPerfectBeat : UnityEvent { };
 public class OnLateBeat : UnityEvent { };
 public class BeatManager : MonoBehaviour
 {
+    public Tongatong[] TongatongObj;
     public OnOkayBeat EVT_OnOkayBeat;
     public OnPerfectBeat EVT_OnPerfectBeat;
     public OnEarlyBeat EVT_OnEarlyBeat;
@@ -31,6 +32,10 @@ public class BeatManager : MonoBehaviour
     void Start()
     {
         PlayerObj.EVT_OnBeatClicked.AddListener(CheckForState);
+        for (int i = 0; i < 3; i++)
+        {
+            TongatongObj[i].EVT_OnTongatongMove.AddListener(CheckForState);
+        }
     }
 
 

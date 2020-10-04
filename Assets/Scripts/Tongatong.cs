@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class OnTongatongMove : UnityEvent { };
-public class MoveTongatongs : MonoBehaviour
+[System.Serializable]
+public class OnTongatongMove : UnityEvent<Beat> { };
+public class Tongatong : MonoBehaviour
 {
     public KeyCode InputCode;
     public OnTongatongMove EVT_OnTongatongMove;
@@ -53,6 +54,19 @@ public class MoveTongatongs : MonoBehaviour
         if (Input.GetKeyDown(InputCode))
         {
             MoveDown();
+     
+    
+            Ray ray = new Ray(this.transform.position, Vector3.down);
+            RaycastHit hit;
+            Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
+            if (Physics.Raycast(ray.origin, ray.direction, out hit, 25))
+            {
+
+                Beat BeatHit = hit.transform.gameObject.GetComponent<Beat>();
+                EVT_OnTongatongMove.Invoke(BeatHit);
+
+            }
+
         }
     }
 
