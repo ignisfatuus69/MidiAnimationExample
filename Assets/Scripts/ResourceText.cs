@@ -18,7 +18,7 @@ public class ResourceText : MonoBehaviour
 
     void UpdateText()
     {
-        TextObj.text = HeaderText + ResourceObj.Value;
+        TextObj.text =  ResourceObj.Value + HeaderText;
     }
 
     
