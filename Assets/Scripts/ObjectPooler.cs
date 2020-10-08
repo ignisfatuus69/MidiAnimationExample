@@ -17,7 +17,7 @@ public abstract class ObjectPooler : MonoBehaviour
 	public int SpawnCount = 1;
 	public float Radius = 5.0f;
 
-	protected List<GameObject> currentSpawn = new List<GameObject>();
+	protected List<GameObject> currentSpawnedObjects = new List<GameObject>();
 
 	protected List<GameObject> pooledObjects = new List<GameObject>();
 	public Vector3 SpawnPosition;
@@ -36,24 +36,24 @@ public abstract class ObjectPooler : MonoBehaviour
 					obj = pooledObjects[pooledObjects.Count - 1];
 					pooledObjects.RemoveAt(pooledObjects.Count-1);
 					obj.SetActive(true);
-					currentSpawn.Add(obj);
+					currentSpawnedObjects.Add(obj);
 					EVT_OnObjectSpawned.Invoke();
 				}
 				else
 				{
 					obj = Instantiate(ObjectToSpawn);
-					currentSpawn.Add(obj);
+					currentSpawnedObjects.Add(obj);
 					EVT_OnObjectSpawned.Invoke();
 				}
 
 			// Randomize position
 			obj.transform.position = SpawnPosition;
 
-				InitializedRemovingSpawn(obj);
+				InitializeSpawnObject(obj);
 			}
 	}
 
-	protected abstract void InitializedRemovingSpawn(GameObject obj);
+	protected abstract void InitializeSpawnObject(GameObject obj);
 
 	
 }

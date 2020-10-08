@@ -25,6 +25,7 @@ public class Beat : MonoBehaviour
     public OnPerfectState EVT_OnPerfectState;
     public OnLateState EVT_OnLateState;
     public OnEndState EVT_OnEndState;
+    public bool IsInteractable = false;
     public BeatState Status { get; private set; }
     public int ScoreValue { get; private set; }
     // Start is called before the first frame update
