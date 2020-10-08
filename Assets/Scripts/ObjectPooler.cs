@@ -8,6 +8,8 @@ public class OnObjectPooled : UnityEvent { };
 
 [System.Serializable]
 public class OnObjectSpawned : UnityEvent { };
+
+
 public abstract class ObjectPooler : MonoBehaviour
 {
 	public OnObjectSpawned EVT_OnObjectSpawned;

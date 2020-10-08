@@ -10,14 +10,18 @@ public class OnDeactivateBeat : UnityEvent <Beat> { };
 [System.Serializable]
 public class OnEarlyBeat : UnityEvent { };
 [System.Serializable]
-public class OnOkayBeat : UnityEvent { internal void AddListener(object v) { throw new NotImplementedException(); } };
+public class OnOkayBeat : UnityEvent {  };
 [System.Serializable]
 public class OnPerfectBeat : UnityEvent { };
 
 [System.Serializable]
 public class OnLateBeat : UnityEvent { };
+
+[System.Serializable]
+public class OnBeatChecked : UnityEvent<Beat> { };
 public class BeatManager : MonoBehaviour
 {
+    public OnBeatChecked EVT_OnBeatChecked;
     public Tongatong[] TongatongObj;
     public OnOkayBeat EVT_OnOkayBeat;
     public OnPerfectBeat EVT_OnPerfectBeat;
@@ -40,9 +44,10 @@ public class BeatManager : MonoBehaviour
 
 
     //Evaluates based on clicking
+    //Determines beat result with interaction
     public void CheckForState(Beat BeatObj)
     {
-        if (!BeatObj.IsInteractable) return;
+        if (!BeatObj.IsInteractable) return;    
         if (BeatObj.Status == BeatState.Early)
         {
             // is having two of them fine?
@@ -64,6 +69,9 @@ public class BeatManager : MonoBehaviour
             EVT_OnPerfectBeat.Invoke();
             EVT_OnDeactivateBeat.Invoke(BeatObj);
         }
+        EVT_OnBeatChecked.Invoke(BeatObj);
+
+
     }
 
 

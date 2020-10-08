@@ -1,21 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
+[System.Serializable]
+
+public class OnBeatPooled : UnityEvent<Beat> { };
 public class BeatSpawner : ObjectPooler
 {
+    public OnBeatPooled EVT_OnBeatPooled;
     public Vector3[] RandomBeatPositions;
     public BeatManager BeatManagerObj;
-    void Start()
-    {
-       // Spawn Objects before hand as extra objects
-        //for (int i = 0; i < 5; i++)
-        //{
-        //    SpawnObjects();
-        //}
-
-
-    }
+ 
     protected override void InitializeSpawnObject(GameObject obj)
     {
         //add for automatic pooling
@@ -35,7 +31,8 @@ public class BeatSpawner : ObjectPooler
 
     private void OnDeactivate(Beat BeatToDespawn)
     {
-  
+
+        EVT_OnBeatPooled.Invoke(BeatToDespawn);
         // Remove the beats
         BeatToDespawn.gameObject.SetActive(false);
         BeatToDespawn.EVT_OnLateState.RemoveListener(BeatManagerObj.EVT_OnLateBeat.Invoke);
@@ -48,6 +45,7 @@ public class BeatSpawner : ObjectPooler
         BeatToDespawn.EVT_OnEndState.RemoveListener(OnDeactivate);
         BeatToDespawn.IsInteractable = false;
 
+        EVT_OnObjectPooled.Invoke();
     }
 
     public void RandomizeBeatPosition()
