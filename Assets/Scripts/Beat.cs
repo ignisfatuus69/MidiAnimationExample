@@ -32,14 +32,12 @@ public class Beat : MonoBehaviour
     void Start()
     {
         ScoreValue = 0;
-
     }
 
     private void OnEnable()
     {
         ScoreValue = 0;
         BeatAnimator.enabled = true;
-
     }
 
     private void ActivateEarlyState()
@@ -49,18 +47,19 @@ public class Beat : MonoBehaviour
 
     private void ActivateOkayState()
     {
- 
+        ScoreValue = 100;
         Status = BeatState.Okay;
     }
 
     private void ActivatePerfectState()
     {
-
+        ScoreValue = 300;
         Status = BeatState.Perfect;
     }
 
     private void ActivateLateState()
     {
+        ScoreValue = 0;
         EVT_OnLateState.Invoke();
         Status = BeatState.Late;
     }

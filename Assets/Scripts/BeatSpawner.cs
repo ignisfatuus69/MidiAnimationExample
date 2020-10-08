@@ -23,10 +23,7 @@ public class BeatSpawner : ObjectPooler
         BeatManagerObj.EVT_OnDeactivateBeat.AddListener(OnDeactivate);
 
         // make interactable here?
-        if (currentSpawnedObjects.Count<=1)
-        {
-            BeatObj.IsInteractable = true;
-        }
+      
     }
 
     private void OnDeactivate(Beat BeatToDespawn)
@@ -43,7 +40,7 @@ public class BeatSpawner : ObjectPooler
         pooledObjects.Add(BeatToDespawn.gameObject);
         currentSpawnedObjects.Remove(BeatToDespawn.gameObject);
         BeatToDespawn.EVT_OnEndState.RemoveListener(OnDeactivate);
-        BeatToDespawn.IsInteractable = false;
+    
 
         EVT_OnObjectPooled.Invoke();
     }

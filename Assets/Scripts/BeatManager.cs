@@ -47,7 +47,7 @@ public class BeatManager : MonoBehaviour
     //Determines beat result with interaction
     public void CheckForState(Beat BeatObj)
     {
-        if (!BeatObj.IsInteractable) return;    
+
         if (BeatObj.Status == BeatState.Early)
         {
             // is having two of them fine?

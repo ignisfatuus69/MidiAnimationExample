@@ -14,6 +14,7 @@ public class ScoreManager : MonoBehaviour
     {
         BeatManagerObj.EVT_OnOkayBeat.AddListener(AddOkayScore);
         BeatManagerObj.EVT_OnPerfectBeat.AddListener(AddPerfectScore);
+        BeatManagerObj.EVT_OnBeatChecked.AddListener(AddScoreToBeat);
     }
 
     private void AddOkayScore()
@@ -24,6 +25,11 @@ public class ScoreManager : MonoBehaviour
     private void AddPerfectScore()
     {
         ScoreResource.AddValue(PerfectScore);
+    }
+
+    private void AddScoreToBeat(Beat beatobj)
+    {
+        ScoreResource.Value += OkayScore;
     }
    
 }

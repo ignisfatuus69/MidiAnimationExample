@@ -42,13 +42,13 @@ public class BeatFeedbackTextSpawner : ObjectPooler
         pooledObjects.Add(BeatToDespawn.gameObject);
         currentSpawnedObjects.Remove(BeatToDespawn.gameObject);
         BeatToDespawn.EVT_OnEndState.RemoveListener(OnDeactivate);
-        BeatToDespawn.IsInteractable = false;
+
 
     }
 
     private void InitializeTextParameters(Beat BeatObjReference)
     {
-        TextString = BeatObjReference.Status.ToString();
+        TextString = BeatObjReference.Status.ToString() + "  " + BeatObjReference.ScoreValue;
         SpawnPosition = RectTransformUtility.WorldToScreenPoint(Camera.main,BeatObjReference.transform.position);
         
     }
