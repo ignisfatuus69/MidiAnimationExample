@@ -38,7 +38,7 @@ public class BeatManager : MonoBehaviour
         PlayerObj.EVT_OnBeatClicked.AddListener(CheckForState);
         for (int i = 0; i < 4; i++)
         {
-            TongatongObj[i].EVT_OnTongatongMove.AddListener(CheckForState);
+            TongatongObj[i].EVT_OnTongatongHit.AddListener(CheckForState);
         }
     }
 

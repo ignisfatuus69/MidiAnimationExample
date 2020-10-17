@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+public class OnHealthUpdated : UnityEvent { };
 
 public class HealthHandler : MonoBehaviour
 {
@@ -18,23 +19,28 @@ public class HealthHandler : MonoBehaviour
         BeatManagerObj.EVT_OnLateBeat.AddListener(ReduceHealthValueOnMiss);
         BeatManagerObj.EVT_OnOkayBeat.AddListener(AddHealthValueOnOkay);
         BeatManagerObj.EVT_OnPerfectBeat.AddListener(AddHealthValueOnPerfect);
+
     }
 
     private void ReduceHealthValueOnMiss()
     {
         Debug.Log("Health Reduced");
         PlayerHealth.ReduceValue(this.MissedValue);
+
     }
 
     private void AddHealthValueOnOkay()
     {
         PlayerHealth.AddValue(this.OkayValue);
+
     }
 
     private void AddHealthValueOnPerfect()
     {
         PlayerHealth.AddValue(this.PerfectValue);
+
     }
+
 
 
 

@@ -14,8 +14,9 @@ public class OnResourceInitialized : UnityEvent { };
 
 public class Resource : MonoBehaviour
 {
-
+    public bool HasCap = false;
     public float Value;
+    public float MaxValue, MinValue;
     public OnResourceAdded EVT_OnResourceAdded;
     public OnResourceSubtracted EVT_OnResourceSubtracted;
     public OnResourceInitialized EVT_OnResourceInitialized;
@@ -29,14 +30,26 @@ public class Resource : MonoBehaviour
 
     public virtual void ReduceValue(float subtractionValue)
     {
-        EVT_OnResourceSubtracted.Invoke();
+
         Value -= subtractionValue;
+        CapValue();
+        EVT_OnResourceSubtracted.Invoke();
     }
 
     public virtual void AddValue(float additive)
     {
-        EVT_OnResourceAdded.Invoke();
+
         Value += additive;
+        CapValue();
+        EVT_OnResourceAdded.Invoke();
+    }
+
+    private void CapValue()
+    {
+        if (!HasCap) return;
+        if (Value >= MaxValue) Value = MaxValue;
+        if (Value <= MinValue) Value = MinValue;
+
     }
 
 }

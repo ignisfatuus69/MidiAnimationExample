@@ -131,13 +131,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2743786}
   - component: {fileID: 2743787}
+  - component: {fileID: 2743788}
   m_Layer: 0
   m_Name: Combo Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2743786
 Transform:
   m_ObjectHideFlags: 0
@@ -164,7 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff85140faa13f34684c844071f6601b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HasCap: 0
   Value: 0
+  MaxValue: 0
+  MinValue: 0
   EVT_OnResourceAdded:
     m_PersistentCalls:
       m_Calls: []
@@ -174,6 +178,20 @@ MonoBehaviour:
   EVT_OnResourceInitialized:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2743788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b1cb31ba6831b42adfba257b8ebd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ComboResource: {fileID: 2743787}
+  BeatManagerObj: {fileID: 419075774}
 --- !u!1 &80331889
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &322978834
 Transform:
   m_ObjectHideFlags: 0
@@ -904,7 +922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &615703763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,7 +935,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff85140faa13f34684c844071f6601b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HasCap: 0
   Value: 0
+  MaxValue: 0
+  MinValue: 0
   EVT_OnResourceAdded:
     m_PersistentCalls:
       m_Calls: []
@@ -955,8 +976,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreResource: {fileID: 615703763}
   BeatManagerObj: {fileID: 419075774}
-  OkayScore: 2
-  PerfectScore: 4
+  OkayScore: 100
+  PerfectScore: 300
 --- !u!1 &700849026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,6 +1066,7 @@ GameObject:
   - component: {fileID: 1408480383}
   - component: {fileID: 1408480386}
   - component: {fileID: 1408480385}
+  - component: {fileID: 1408480384}
   m_Layer: 5
   m_Name: Combo Text
   m_TagString: Untagged
@@ -1071,6 +1093,21 @@ RectTransform:
   m_AnchoredPosition: {x: 86, y: -38}
   m_SizeDelta: {x: 320, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1408480384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408480382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644ff7b951753ea4698dd2fab1e25064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextObj: {fileID: 1408480385}
+  ResourceObj: {fileID: 2743787}
+  HeaderText: x
 --- !u!114 &1408480385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,7 +1140,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50x
+  m_Text: 0x
 --- !u!222 &1408480386
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1740,6 +1777,7 @@ GameObject:
   - component: {fileID: 1883554175}
   - component: {fileID: 1883554177}
   - component: {fileID: 1883554176}
+  - component: {fileID: 1883554178}
   m_Layer: 0
   m_Name: Health Percentage Background Image
   m_TagString: Untagged
@@ -1804,6 +1842,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883554174}
   m_CullTransparentMesh: 0
+--- !u!114 &1883554178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883554174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a3b96b4ebbf9b4fa66c6b90686738e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {fileID: 0}
+  HealthHandlerObj: {fileID: 0}
 --- !u!1 &2020392709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,7 +1949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2021826548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,7 +1993,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff85140faa13f34684c844071f6601b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 0
+  HasCap: 1
+  Value: 75
+  MaxValue: 100
+  MinValue: 0
   EVT_OnResourceAdded:
     m_PersistentCalls:
       m_Calls: []
@@ -2123,9 +2178,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6361973601900243509, guid: f0c3e61043403184d96f5bdce516e1ff,
         type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361973601900243509, guid: f0c3e61043403184d96f5bdce516e1ff,
+        type: 3}
       propertyPath: m_SceneBindings.Array.data[1].value
       value: 
       objectReference: {fileID: 1673448291}
+    - target: {fileID: 6361973601900243509, guid: f0c3e61043403184d96f5bdce516e1ff,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[2].key
+      value: 
+      objectReference: {fileID: 5889197057867238823, guid: 2f9e31a38ad9d6347bcd334a58fc875a,
+        type: 2}
     - target: {fileID: 6361973601900243510, guid: f0c3e61043403184d96f5bdce516e1ff,
         type: 3}
       propertyPath: m_Name
@@ -2153,6 +2219,11 @@ PrefabInstance:
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: RandomBeatPositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: TongatongsPare.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
@@ -2220,6 +2291,26 @@ PrefabInstance:
       propertyPath: RandomBeatPositions.Array.data[3].z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: TongatongsPare.Array.data[0]
+      value: 
+      objectReference: {fileID: 523596049}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: TongatongsPare.Array.data[1]
+      value: 
+      objectReference: {fileID: 458000656}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: TongatongsPare.Array.data[2]
+      value: 
+      objectReference: {fileID: 425320509}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: TongatongsPare.Array.data[3]
+      value: 
+      objectReference: {fileID: 1343774179}
     - target: {fileID: 6781716576012910845, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2433,6 +2524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Beat Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288166172275532071, guid: 13c0551d3dbee3642853156e611bef20,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13c0551d3dbee3642853156e611bef20, type: 3}

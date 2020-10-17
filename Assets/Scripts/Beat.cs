@@ -37,30 +37,35 @@ public class Beat : MonoBehaviour
     private void OnEnable()
     {
         ScoreValue = 0;
-        BeatAnimator.enabled = true;
+
     }
 
     private void ActivateEarlyState()
     {
+        ScoreValue = 0;
+      //  EVT_OnEarlyState.Invoke();
         Status = BeatState.Early;
     }
 
     private void ActivateOkayState()
     {
         ScoreValue = 100;
+      //  EVT_OnOkayState.Invoke();
         Status = BeatState.Okay;
     }
 
     private void ActivatePerfectState()
     {
         ScoreValue = 300;
+    //    EVT_OnPerfectState.Invoke();
+        
         Status = BeatState.Perfect;
     }
 
     private void ActivateLateState()
     {
         ScoreValue = 0;
-        EVT_OnLateState.Invoke();
+     //   EVT_OnLateState.Invoke();
         Status = BeatState.Late;
     }
 

@@ -35,8 +35,8 @@ public abstract class ObjectPooler : MonoBehaviour
 				if (pooledObjects.Count >0)
 				{
 				// get the last pooled object
-					obj = pooledObjects[pooledObjects.Count - 1];
-					pooledObjects.RemoveAt(pooledObjects.Count-1);
+					obj = pooledObjects[0];
+					pooledObjects.RemoveAt(0);
 					obj.SetActive(true);
 					currentSpawnedObjects.Add(obj);
 					EVT_OnObjectSpawned.Invoke();
