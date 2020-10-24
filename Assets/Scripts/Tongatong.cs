@@ -21,7 +21,7 @@ public class Tongatong : BeatInteractor
         InitialPosition = transform.position;
     }
 
-    public void MoveDown()
+    private void MoveDown()
     {
         StopAllCoroutines();
         StartCoroutine(MoveToDisplacement(displacement));
@@ -51,6 +51,7 @@ public class Tongatong : BeatInteractor
     // Update is called once per frame
     void Update()
     {
+        //Tongatong PC Controls
         if (Input.GetKeyDown(InputCode))
         {
             MoveDown();

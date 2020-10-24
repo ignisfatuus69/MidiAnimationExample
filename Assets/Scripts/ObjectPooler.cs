@@ -40,22 +40,22 @@ public abstract class ObjectPooler : MonoBehaviour
 					obj.SetActive(true);
 				InitializeSpawnObject(obj);
 				currentSpawnedObjects.Add(obj);
-					EVT_OnObjectSpawned.Invoke();
+					
 				}
 				else
 				{
 					obj = Instantiate(ObjectToSpawn);
 				InitializeSpawnObject(obj);
 				currentSpawnedObjects.Add(obj);
-					EVT_OnObjectSpawned.Invoke();
+			
 				}
 
 		
 			// Randomize position
 			obj.transform.position = SpawnPosition;
 
-
-			}
+			EVT_OnObjectSpawned.Invoke();
+		}
 	}
 
 	protected abstract void InitializeSpawnObject(GameObject obj);

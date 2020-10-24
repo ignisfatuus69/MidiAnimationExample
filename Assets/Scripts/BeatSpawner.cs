@@ -28,7 +28,6 @@ public class BeatSpawner : ObjectPooler
         //add for automatic pooling
 
         Beat BeatObj = obj.GetComponent<Beat>();
-        
 
         BeatObj.EVT_OnEndState.AddListener(OnDeactivate);
 
@@ -43,6 +42,8 @@ public class BeatSpawner : ObjectPooler
 
         //  EVT_OnBeatPooled.Invoke(BeatToDespawn);
         // Remove the beats
+        EVT_OnBeatPooled.Invoke(BeatToDespawn);
+        EVT_OnObjectPooled.Invoke();
         BeatToDespawn.BeatAnimator.speed = 1;
         BeatToDespawn.gameObject.SetActive(false);
 
@@ -50,9 +51,6 @@ public class BeatSpawner : ObjectPooler
         pooledObjects.Add(BeatToDespawn.gameObject);
         currentSpawnedObjects.Remove(BeatToDespawn.gameObject);
             
-    
-
-     //   EVT_OnObjectPooled.Invoke();
     }
 
     public void RandomizeBeatPosition()

@@ -510,7 +510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &322978834
 Transform:
   m_ObjectHideFlags: 0
@@ -549,7 +549,11 @@ MonoBehaviour:
   SpawnCount: 1
   Radius: 5
   SpawnPosition: {x: 0, y: 0, z: 0}
-  BeatInteractorObj: {fileID: 0}
+  BeatInteractorObjs:
+  - {fileID: 523596049}
+  - {fileID: 458000656}
+  - {fileID: 425320509}
+  - {fileID: 1343774179}
   BeatSpawnerobj: {fileID: 1673448292}
   CanvasParent: {fileID: 1792602326}
 --- !u!114 &324767433 stripped
@@ -1092,6 +1096,52 @@ MonoBehaviour:
   HardSpeed: 2
   BeatSpawnerObj: {fileID: 1673448292}
   GameDifficultyOptions: 0
+--- !u!1 &1081938223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1081938225}
+  - component: {fileID: 1081938224}
+  m_Layer: 0
+  m_Name: TongatongNodeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1081938224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081938223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0a1c0bd32af7b4ea502aac985fa53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnCounts: 00000000000000000000000000000000
+  BeatSpawnerObj: {fileID: 1673448292}
+  BeatReference: {fileID: 0}
+--- !u!4 &1081938225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081938223}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.9617727, y: 0.5005479, z: -0.27140898}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1343774179 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2501973466692369296, guid: 34a5b8a25a9960a4d819b5c3e5860a7b,
@@ -2263,7 +2313,7 @@ PrefabInstance:
     - target: {fileID: 6781716576012910843, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: m_Name
-      value: Beat Spawner
+      value: Beat Spawner/Listener
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
@@ -2293,17 +2343,17 @@ PrefabInstance:
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: RandomBeatPositions.Array.data[1].x
-      value: -4
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: RandomBeatPositions.Array.data[2].x
-      value: -4
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: RandomBeatPositions.Array.data[3].x
-      value: -4
+      value: 4.49
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
@@ -2489,11 +2539,11 @@ PrefabInstance:
         type: 3}
       propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1673448292}
+      objectReference: {fileID: 1081938224}
     - target: {fileID: 6781716576012910846, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: EnableNextBeat
+      value: CheckNodePosition
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910846, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}

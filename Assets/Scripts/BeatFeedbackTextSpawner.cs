@@ -8,16 +8,16 @@ public class OnBeatFeedbackTextSpawn : UnityEvent<Beat> { };
 public class BeatFeedbackTextSpawner : ObjectPooler
 {
     private string TextString;
-    public BeatInteractor BeatInteractorObj;
+    public BeatInteractor[] BeatInteractorObjs;
     public BeatSpawner BeatSpawnerobj;
     public Transform CanvasParent;
 
 
     private void Start()
     {
+     
 
-        BeatInteractorObj.EVT_OnBeatEvaluating.AddListener(InitializeTextParameters);
-
+        BeatSpawnerobj.EVT_OnBeatPooled.AddListener(InitializeTextParameters);
         BeatSpawnerobj.EVT_OnObjectPooled.AddListener(SpawnObjects);
     }
     protected override void InitializeSpawnObject(GameObject obj)
@@ -25,23 +25,22 @@ public class BeatFeedbackTextSpawner : ObjectPooler
         obj.transform.SetParent(CanvasParent);
         Text BeatFeedbackText = obj.GetComponent<Text>();
         BeatFeedbackText.text = TextString;
-
+        StartCoroutine(DespawnInSeconds(obj));
 
     }
 
-    private void OnDeactivate(Beat BeatToDespawn)
+    private void OnDeactivate(GameObject obj)
     {
 
-        // Remove the beats
-        BeatToDespawn.gameObject.SetActive(false);
-     //   BeatToDespawn.EVT_OnLateState.RemoveListener(BeatManagerObj.EVT_OnLateBeat.Invoke);
+
+        obj.gameObject.SetActive(false);
 
 
-        BeatToDespawn.GetComponent<Animator>().enabled = false;
-    //    BeatManagerObj.EVT_OnDeactivateBeat.RemoveListener(OnDeactivate);
-        pooledObjects.Add(BeatToDespawn.gameObject);
-        currentSpawnedObjects.Remove(BeatToDespawn.gameObject);
-        BeatToDespawn.EVT_OnEndState.RemoveListener(OnDeactivate);
+
+ 
+        pooledObjects.Add(obj.gameObject);
+        currentSpawnedObjects.Remove(obj.gameObject);
+
 
 
     }
@@ -51,5 +50,11 @@ public class BeatFeedbackTextSpawner : ObjectPooler
         TextString = BeatObjReference.Status.ToString() + "  " + BeatObjReference.ScoreValue;
         SpawnPosition = RectTransformUtility.WorldToScreenPoint(Camera.main,BeatObjReference.transform.position);
         
+    }
+
+    IEnumerator DespawnInSeconds(GameObject objToDespawn)
+    {
+        yield return new WaitForSeconds(2);
+        OnDeactivate(objToDespawn);
     }
 }
