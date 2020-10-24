@@ -20,6 +20,7 @@ public class Beat : MonoBehaviour
 {
 
     public Animator BeatAnimator;
+    public Animation SpriteAnimation;
     public OnEarlyState EVT_OnEarlyState;
     public OnOkayState EVT_OnOkayState;
     public OnPerfectState EVT_OnPerfectState;
@@ -37,7 +38,13 @@ public class Beat : MonoBehaviour
     private void OnEnable()
     {
         ScoreValue = 0;
+        BeatAnimator.enabled = true;
+        BeatAnimator.Play(0, -1, 0);
+    }
 
+    private void OnDisable()
+    {
+        BeatAnimator.playbackTime = 0;
     }
 
     private void ActivateEarlyState()
@@ -71,6 +78,7 @@ public class Beat : MonoBehaviour
 
     private void ActivateEndState()
     {
+        BeatAnimator.enabled = false;
         EVT_OnEndState.Invoke(this);
         Status = BeatState.End;
     }

@@ -38,20 +38,23 @@ public abstract class ObjectPooler : MonoBehaviour
 					obj = pooledObjects[0];
 					pooledObjects.RemoveAt(0);
 					obj.SetActive(true);
-					currentSpawnedObjects.Add(obj);
+				InitializeSpawnObject(obj);
+				currentSpawnedObjects.Add(obj);
 					EVT_OnObjectSpawned.Invoke();
 				}
 				else
 				{
 					obj = Instantiate(ObjectToSpawn);
-					currentSpawnedObjects.Add(obj);
+				InitializeSpawnObject(obj);
+				currentSpawnedObjects.Add(obj);
 					EVT_OnObjectSpawned.Invoke();
 				}
 
+		
 			// Randomize position
 			obj.transform.position = SpawnPosition;
 
-				InitializeSpawnObject(obj);
+
 			}
 	}
 
