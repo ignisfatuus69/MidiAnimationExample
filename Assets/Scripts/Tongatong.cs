@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 [System.Serializable]
 public class OnTongatongHit : UnityEvent<Beat> { };
-public class Tongatong : MonoBehaviour
+public class Tongatong : BeatInteractor
 {
     public KeyCode InputCode;
     public OnTongatongHit EVT_OnTongatongHit;
@@ -63,35 +63,13 @@ public class Tongatong : MonoBehaviour
             {
 
                 Beat BeatHit = hit.transform.gameObject.GetComponent<Beat>();
-                CheckForState(BeatHit);
+                EvaluateBeatStates(BeatHit);
 
             }
 
         }
     }
 
-    void CheckForState(Beat BeatHit)
-    {
-        EVT_OnTongatongHit.Invoke(BeatHit);
-        //if (BeatHit.Status == BeatState.Early)
-        //{
-        //    EVT_OnTongatongHit.Invoke(BeatHit);
-        //    Debug.Log("Early");
-        //}
 
-        //else if (BeatHit.Status == BeatState.Okay)
-        //{
-        //    EVT_OnTongatongHit.Invoke(BeatHit);
-        //    Debug.Log("Okay");
-
-        //}
-        //else if (BeatHit.Status == BeatState.Perfect)
-        //{
-        //    EVT_OnTongatongHit.Invoke(BeatHit);
-        //    Debug.Log("Perfect");
-        //}
-
-
-    }
 
 }

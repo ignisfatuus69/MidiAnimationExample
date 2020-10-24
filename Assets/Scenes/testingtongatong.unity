@@ -549,7 +549,7 @@ MonoBehaviour:
   SpawnCount: 1
   Radius: 5
   SpawnPosition: {x: 0, y: 0, z: 0}
-  BeatManagerObj: {fileID: 419075774}
+  BeatInteractorObj: {fileID: 0}
   BeatSpawnerobj: {fileID: 1673448292}
   CanvasParent: {fileID: 1792602326}
 --- !u!114 &324767433 stripped
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   MediumSpeed: 1.5
   HardSpeed: 2
   BeatSpawnerObj: {fileID: 1673448292}
-  GameDifficultyOptions: 2
+  GameDifficultyOptions: 0
 --- !u!114 &1343774179 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2501973466692369296, guid: 34a5b8a25a9960a4d819b5c3e5860a7b,
@@ -2277,6 +2277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
+      propertyPath: BeatInteractorObjs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
       propertyPath: BeatManagerObj
       value: 
       objectReference: {fileID: 419075774}
@@ -2288,17 +2293,17 @@ PrefabInstance:
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: RandomBeatPositions.Array.data[1].x
-      value: -1.25
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: RandomBeatPositions.Array.data[2].x
-      value: 1.49
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: RandomBeatPositions.Array.data[3].x
-      value: 4.49
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
@@ -2358,6 +2363,26 @@ PrefabInstance:
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: TongatongsPare.Array.data[3]
+      value: 
+      objectReference: {fileID: 1343774179}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: BeatInteractorObjs.Array.data[0]
+      value: 
+      objectReference: {fileID: 523596049}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: BeatInteractorObjs.Array.data[1]
+      value: 
+      objectReference: {fileID: 458000656}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: BeatInteractorObjs.Array.data[2]
+      value: 
+      objectReference: {fileID: 425320509}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: BeatInteractorObjs.Array.data[3]
       value: 
       objectReference: {fileID: 1343774179}
     - target: {fileID: 6781716576012910845, guid: 83ece154380a0084896c528b63a6610c,

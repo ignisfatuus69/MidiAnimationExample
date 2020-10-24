@@ -9,16 +9,18 @@ public class OnBeatPooled : UnityEvent<Beat> { };
 public class BeatSpawner : ObjectPooler
 {
     public float BeatAnimationSpeed;
-    public Tongatong[] TongatongsPare;
+    public BeatInteractor[] BeatInteractorObjs;
     public OnBeatPooled EVT_OnBeatPooled;
     public Vector3[] RandomBeatPositions;
+
     //  public BeatManager BeatManagerObj;
 
     private void Start()
     {
-        for (int i = 0; i < TongatongsPare.Length; i++)
+        for (int i = 0; i < BeatInteractorObjs.Length; i++)
         {
-            TongatongsPare[i].EVT_OnTongatongHit.AddListener(OnDeactivate);
+            BeatInteractorObjs[i].EVT_OnBeatEvaluated.AddListener(OnDeactivate);
+            //BeatInteractorObjs[i].EVT_OnBeatEvaluating.AddListener
         }
     }
     protected override void InitializeSpawnObject(GameObject obj)
@@ -27,8 +29,12 @@ public class BeatSpawner : ObjectPooler
 
         Beat BeatObj = obj.GetComponent<Beat>();
         
+
         BeatObj.EVT_OnEndState.AddListener(OnDeactivate);
+
         BeatObj.BeatAnimator.speed = this.BeatAnimationSpeed;
+     
+        
 
     }
 

@@ -8,15 +8,15 @@ public class OnBeatFeedbackTextSpawn : UnityEvent<Beat> { };
 public class BeatFeedbackTextSpawner : ObjectPooler
 {
     private string TextString;
-    public BeatManager BeatManagerObj;
+    public BeatInteractor BeatInteractorObj;
     public BeatSpawner BeatSpawnerobj;
     public Transform CanvasParent;
 
 
     private void Start()
     {
-        BeatSpawnerobj.EVT_OnBeatPooled.AddListener(InitializeTextParameters);
-        BeatManagerObj.EVT_OnBeatChecked.AddListener(InitializeTextParameters);
+
+        BeatInteractorObj.EVT_OnBeatEvaluating.AddListener(InitializeTextParameters);
 
         BeatSpawnerobj.EVT_OnObjectPooled.AddListener(SpawnObjects);
     }
@@ -34,11 +34,11 @@ public class BeatFeedbackTextSpawner : ObjectPooler
 
         // Remove the beats
         BeatToDespawn.gameObject.SetActive(false);
-        BeatToDespawn.EVT_OnLateState.RemoveListener(BeatManagerObj.EVT_OnLateBeat.Invoke);
+     //   BeatToDespawn.EVT_OnLateState.RemoveListener(BeatManagerObj.EVT_OnLateBeat.Invoke);
 
 
         BeatToDespawn.GetComponent<Animator>().enabled = false;
-        BeatManagerObj.EVT_OnDeactivateBeat.RemoveListener(OnDeactivate);
+    //    BeatManagerObj.EVT_OnDeactivateBeat.RemoveListener(OnDeactivate);
         pooledObjects.Add(BeatToDespawn.gameObject);
         currentSpawnedObjects.Remove(BeatToDespawn.gameObject);
         BeatToDespawn.EVT_OnEndState.RemoveListener(OnDeactivate);
