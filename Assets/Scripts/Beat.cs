@@ -78,6 +78,7 @@ public class Beat : MonoBehaviour
 
     private void ActivateEndState()
     {
+        ScoreValue = 0;
         BeatAnimator.enabled = false;
         EVT_OnEndState.Invoke(this);
         Status = BeatState.End;

@@ -6,27 +6,25 @@ public class ScoreManager : MonoBehaviour
 {
     public Resource ScoreResource;
     public BeatManager BeatManagerObj;
+    public BeatSpawner BeatSpawnerObj;
     public float OkayScore;
     public float PerfectScore;
 
     // Start is called before the first frame update
     void Start()
     {
-        BeatManagerObj.EVT_OnOkayBeat.AddListener(AddOkayScore);
-        BeatManagerObj.EVT_OnPerfectBeat.AddListener(AddPerfectScore);
-     //   BeatManagerObj.EVT_OnBeatChecked.AddListener(AddScoreToBeat);
+
+        BeatSpawnerObj.EVT_OnBeatPooled.AddListener(AddScore);
+
 
     }
 
-    private void AddOkayScore()
+    private void AddScore(Beat BeatObj)
     {
-        ScoreResource.AddValue(OkayScore);
+        ScoreResource.AddValue(BeatObj.ScoreValue);
     }
 
-    private void AddPerfectScore()
-    {
-        ScoreResource.AddValue(PerfectScore);
-    }
+ 
 
     //private void AddScoreToBeat(Beat beatobj)
     //{
