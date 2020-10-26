@@ -1097,6 +1097,52 @@ MonoBehaviour:
   HardSpeed: 2
   BeatSpawnerObj: {fileID: 1673448292}
   GameDifficultyOptions: 0
+--- !u!1 &1023292507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023292509}
+  - component: {fileID: 1023292508}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1023292508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023292507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b512fc2bce4cf244cba102c3b845bd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: 1.49, y: -2, z: -1}
+  BeatsContained: []
+  Count: 0
+--- !u!4 &1023292509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023292507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.13, y: -2, z: -0.8523598}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1081938223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1175,7 @@ MonoBehaviour:
   SpawnCounts: 00000000000000000000000000000000
   BeatSpawnerObj: {fileID: 1673448292}
   BeatReference: {fileID: 0}
+  DelayTimeInSeconds: 0
 --- !u!4 &1081938225
 Transform:
   m_ObjectHideFlags: 0
@@ -1155,6 +1202,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80314042071413438f5c0e827f87b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1381156895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1381156897}
+  - component: {fileID: 1381156896}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1381156896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381156895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b512fc2bce4cf244cba102c3b845bd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: 4.49, y: -2, z: -1}
+  BeatsContained: []
+  Count: 0
+--- !u!4 &1381156897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381156895}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.71, y: -2, z: -0.8523598}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1408480382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,6 +1545,52 @@ Transform:
   m_Father: {fileID: 2028672469}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1554889447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1554889449}
+  - component: {fileID: 1554889448}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1554889448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554889447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b512fc2bce4cf244cba102c3b845bd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: -4, y: -2, z: -1}
+  BeatsContained: []
+  Count: 0
+--- !u!4 &1554889449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554889447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.59, y: -2, z: -0.8523598}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1590870817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1960,6 +2099,52 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8546bcac9b08d8c47b7e2b422b07037e, type: 3}
   - {fileID: 21300000, guid: bc8ce53c12c200a4f8410ffe1483b96f, type: 3}
   - {fileID: 21300000, guid: 2ce2d3068a96ed34e8d3bafadfecc9b6, type: 3}
+--- !u!1 &1951564191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951564193}
+  - component: {fileID: 1951564192}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1951564192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951564191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b512fc2bce4cf244cba102c3b845bd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: -1.25, y: -2, z: -1}
+  BeatsContained: []
+  Count: 0
+--- !u!4 &1951564193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951564191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.61, y: -2, z: -0.8523598}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2020392709
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,6 +2522,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
+      propertyPath: PositionCounters.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: BeatContainers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
       propertyPath: BeatManagerObj
       value: 
       objectReference: {fileID: 419075774}
@@ -2440,6 +2635,31 @@ PrefabInstance:
       propertyPath: BeatInteractorObjs.Array.data[3]
       value: 
       objectReference: {fileID: 1343774179}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: BeatContainers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1554889448}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: BeatContainers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1951564192}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: BeatContainers.Array.data[2]
+      value: 
+      objectReference: {fileID: 1023292508}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: BeatContainers.Array.data[3]
+      value: 
+      objectReference: {fileID: 1381156896}
+    - target: {fileID: 6781716576012910844, guid: 83ece154380a0084896c528b63a6610c,
+        type: 3}
+      propertyPath: IsSpawningOnRandomPosition
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910845, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2498,12 +2718,12 @@ PrefabInstance:
     - target: {fileID: 6781716576012910846, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910846, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RandomizeBeatPosition
+      value: SpawnObjects
       objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910846, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
@@ -2544,7 +2764,7 @@ PrefabInstance:
         type: 3}
       propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1081938224}
+      objectReference: {fileID: 0}
     - target: {fileID: 6781716576012910846, guid: 83ece154380a0084896c528b63a6610c,
         type: 3}
       propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName

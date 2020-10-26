@@ -43,6 +43,7 @@ public class BeatInteractor : MonoBehaviour
             Debug.Log("Perfect");
             EVT_OnBeatEvaluated.Invoke(BeatToEvaluate);
         }
+        CanInteract = false;
         StartCoroutine(EnableInteraction());
     }
 

@@ -8,14 +8,15 @@ using UnityEngine.Events;
 public class OnBeatPooled : UnityEvent<Beat> { };
 public class BeatSpawner : ObjectPooler
 {
-    public bool IsTongatong;
+    public bool IsSpawningOnRandomPosition;
     public float BeatAnimationSpeed;
-    public BeatInteractor[] BeatInteractorObjs;
 
+    public BeatInteractor[] BeatInteractorObjs;
     public OnBeatPooled EVT_OnBeatPooled;
+    public BeatContainer[] BeatContainers;
     public Vector3[] RandomBeatPositions;
     public int[] PositionCounters;
-    private List<int> lastSpawnIndexes;
+    private List<int> lastSpawnIndexes = new List<int>();
     //  public BeatManager BeatManagerObj;
 
     private void Start()
@@ -25,6 +26,7 @@ public class BeatSpawner : ObjectPooler
             BeatInteractorObjs[i].EVT_OnBeatEvaluated.AddListener(OnDeactivate);
             //BeatInteractorObjs[i].EVT_OnBeatEvaluating.AddListener
         }
+
         for (int i = 0; i < PositionCounters.Length; i++)
         {
             PositionCounters[i] = 0;
@@ -33,13 +35,25 @@ public class BeatSpawner : ObjectPooler
     protected override void InitializeSpawnObject(GameObject obj)
     {
         //add for automatic pooling
+
+        if (IsSpawningOnRandomPosition)
+        {
+            int randomNumber = Random.Range(0, RandomBeatPositions.Length);
+            SpawnPosition = BeatContainers[randomNumber].Position;
+
+
+            PositionCounters[randomNumber] += 1;
+            BeatContainers[randomNumber].AddBeat(obj);
+            lastSpawnIndexes.Add(randomNumber);
+        }
         Beat BeatObj = obj.GetComponent<Beat>();
+
         //call it here get the value across somehow
         BeatObj.EVT_OnEndState.AddListener(OnDeactivate);
 
         BeatObj.BeatAnimator.speed = this.BeatAnimationSpeed;
-        
-        
+
+
 
     }
   
@@ -48,11 +62,14 @@ public class BeatSpawner : ObjectPooler
 
         //  EVT_OnBeatPooled.Invoke(BeatToDespawn);
         // Remove the beats
-        if (IsTongatong)
-        {
-            PositionCounters[lastSpawnIndexes[0]] -= 1;
-            lastSpawnIndexes.RemoveAt(0);
+        if (IsSpawningOnRandomPosition)
+        { 
+        PositionCounters[lastSpawnIndexes[0]] -= 1;
+        BeatContainers[lastSpawnIndexes[0]].RemoveBeat(BeatToDespawn.gameObject);
+        lastSpawnIndexes.RemoveAt(0);
         }
+
+
         EVT_OnBeatPooled.Invoke(BeatToDespawn);
         EVT_OnObjectPooled.Invoke();
         BeatToDespawn.BeatAnimator.speed = 1;
@@ -64,11 +81,12 @@ public class BeatSpawner : ObjectPooler
             
     }
 
-
     public void RandomizeBeatPosition()
     {
         int randomNumber = Random.Range(0, RandomBeatPositions.Length);
-        SpawnPosition = RandomBeatPositions[randomNumber];
+        SpawnPosition = BeatContainers[randomNumber].Position;
+
+
         PositionCounters[randomNumber] += 1;
 
         lastSpawnIndexes.Add(randomNumber);
