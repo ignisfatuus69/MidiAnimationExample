@@ -63,7 +63,7 @@ public class Tongatong : BeatInteractor
             if (Physics.Raycast(ray.origin, ray.direction, out hit, 25))
             {
                 BeatNode NodeHit = hit.transform.gameObject.GetComponent<BeatNode>();
-       
+                EvaluateBeatNode(NodeHit);
 
 
             }

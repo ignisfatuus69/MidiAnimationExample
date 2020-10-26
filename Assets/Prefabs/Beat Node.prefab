@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6933529010767108737}
   - component: {fileID: 6933529010767108736}
+  - component: {fileID: -4543081709543228319}
   m_Layer: 0
-  m_Name: Beat Nodes
+  m_Name: Beat Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,4 +46,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Position: {x: -4, y: -2, z: -1}
   BeatsContained: []
-  Count: 0
+--- !u!135 &-4543081709543228319
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6933529010767108751}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
