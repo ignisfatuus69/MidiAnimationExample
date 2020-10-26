@@ -26,11 +26,11 @@ public class BeatClicker : BeatInteractor
  
             RaycastHit hit;
             Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
-            if (Physics.Raycast(ray.origin, ray.direction, out hit, 25))
+            if (Physics.Raycast(ray.origin, ray.direction, out hit, 50))
             {
                 
-                Beat BeatHit = hit.transform.gameObject.GetComponent<Beat>();
-                EVT_OnBeatClicked.Invoke(BeatHit);
+                BeatNode Node = hit.transform.gameObject.GetComponent<BeatNode>();
+                EvaluateBeatNode(Node);
             }
         }
     }

@@ -11,27 +11,38 @@ public class OnCombAdded : UnityEvent { };
 public class OnComboReset : UnityEvent { };
 public class ComboManager : MonoBehaviour
 {
-
+    public BeatSpawner BeatSpawnerObj;
     public Resource ComboResource;
-    public BeatManager BeatManagerObj;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        BeatManagerObj.EVT_OnEarlyBeat.AddListener(ResetCombo);
-        BeatManagerObj.EVT_OnEarlyBeat.AddListener(ResetCombo);
-        BeatManagerObj.EVT_OnOkayBeat.AddListener(AddCombo);
-        BeatManagerObj.EVT_OnPerfectBeat.AddListener(AddCombo);
+        BeatSpawnerObj.EVT_OnBeatPooled.AddListener(ComboEvaluation);
     }
 
-    void AddCombo()
+   private void ComboEvaluation(Beat BeatInteracted)
     {
-        ComboResource.AddValue(1);
-    }
-
-    void ResetCombo()
-    {
-        ComboResource.ReduceValue(ComboResource.Value);
+        if (BeatInteracted.Status == BeatState.Early)
+        {
+            ComboResource.ReduceValue(ComboResource.Value);
+        }
+        if (BeatInteracted.Status == BeatState.Okay)
+        {
+            ComboResource.AddValue(1);
+        }
+        if (BeatInteracted.Status == BeatState.Perfect)
+        {
+            ComboResource.AddValue(1);
+        }
+        if (BeatInteracted.Status == BeatState.Late)
+        {
+            ComboResource.ReduceValue(ComboResource.Value);
+        }
+        if (BeatInteracted.Status == BeatState.End)
+        {
+            ComboResource.ReduceValue(ComboResource.Value);
+        }
     }
 
  
