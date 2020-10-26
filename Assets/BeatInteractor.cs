@@ -12,16 +12,20 @@ public class OnBeatEvaluated : UnityEvent<Beat> { };
 
 public class BeatInteractor : MonoBehaviour
 {
-    private bool CanInteract = true;
+
     public OnBeatInteraction EVT_OnBeatInteraction;
     public OnBeatEvaluating EVT_OnBeatEvaluating;
     public OnBeatEvaluated EVT_OnBeatEvaluated;
     // Start is called before the first frame update
   
+    protected virtual void EvaluateBeatNode(BeatNode BeatNode)
+    {
+        EvaluateBeatStates(BeatNode.BeatsContained[0]);
+    }
 
     protected virtual void EvaluateBeatStates(Beat BeatToEvaluate)
     {
-        if (CanInteract == false) return;
+ 
         EVT_OnBeatInteraction.Invoke(BeatToEvaluate);
         if (BeatToEvaluate.Status == BeatState.Early)
         {
@@ -43,13 +47,8 @@ public class BeatInteractor : MonoBehaviour
             Debug.Log("Perfect");
             EVT_OnBeatEvaluated.Invoke(BeatToEvaluate);
         }
-        CanInteract = false;
-        StartCoroutine(EnableInteraction());
+      
     }
 
-    IEnumerator EnableInteraction()
-    {
-        yield return new WaitForSeconds(0.01f);
-        CanInteract = true;
-    }
+    
 }

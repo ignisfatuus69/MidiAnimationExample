@@ -13,7 +13,7 @@ public class BeatSpawner : ObjectPooler
 
     public BeatInteractor[] BeatInteractorObjs;
     public OnBeatPooled EVT_OnBeatPooled;
-    public BeatContainer[] BeatContainers;
+    public BeatNode[] BeatContainers;
     public Vector3[] RandomBeatPositions;
     public int[] PositionCounters;
     private List<int> lastSpawnIndexes = new List<int>();
@@ -35,7 +35,7 @@ public class BeatSpawner : ObjectPooler
     protected override void InitializeSpawnObject(GameObject obj)
     {
         //add for automatic pooling
-
+        Beat BeatObj = obj.GetComponent<Beat>();
         if (IsSpawningOnRandomPosition)
         {
             int randomNumber = Random.Range(0, RandomBeatPositions.Length);
@@ -43,10 +43,10 @@ public class BeatSpawner : ObjectPooler
 
 
             PositionCounters[randomNumber] += 1;
-            BeatContainers[randomNumber].AddBeat(obj);
+            BeatContainers[randomNumber].AddBeat(BeatObj);
             lastSpawnIndexes.Add(randomNumber);
         }
-        Beat BeatObj = obj.GetComponent<Beat>();
+       
 
         //call it here get the value across somehow
         BeatObj.EVT_OnEndState.AddListener(OnDeactivate);
@@ -65,7 +65,7 @@ public class BeatSpawner : ObjectPooler
         if (IsSpawningOnRandomPosition)
         { 
         PositionCounters[lastSpawnIndexes[0]] -= 1;
-        BeatContainers[lastSpawnIndexes[0]].RemoveBeat(BeatToDespawn.gameObject);
+        BeatContainers[lastSpawnIndexes[0]].RemoveBeat(BeatToDespawn);
         lastSpawnIndexes.RemoveAt(0);
         }
 
