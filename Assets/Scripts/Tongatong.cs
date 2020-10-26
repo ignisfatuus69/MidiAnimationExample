@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable]
-public class OnTongatongHit : UnityEvent<Beat> { };
+
 public class Tongatong : BeatInteractor
 {
     public KeyCode InputCode;
-    public OnTongatongHit EVT_OnTongatongHit;
     public float speed = 5;
     public float displacement = 20;
     private Vector2 InitialPosition;

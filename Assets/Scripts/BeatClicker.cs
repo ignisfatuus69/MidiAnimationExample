@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [System.Serializable]
 public class OnBeatClicked : UnityEvent<Beat> { };
 
-public class BeatClicker : MonoBehaviour
+public class BeatClicker : BeatInteractor
 {
     public OnBeatClicked EVT_OnBeatClicked;
     // Update is called once per frame

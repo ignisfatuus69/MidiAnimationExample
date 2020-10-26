@@ -20,6 +20,7 @@ public class BeatInteractor : MonoBehaviour
   
     protected virtual void EvaluateBeatNode(BeatNode BeatNode)
     {
+        if (BeatNode.BeatsContained.Count <= 0) return;
         EvaluateBeatStates(BeatNode.BeatsContained[0]);
     }
 
