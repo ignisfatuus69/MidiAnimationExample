@@ -133,6 +133,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff85140faa13f34684c844071f6601b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &312986081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7535049376125256214, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+    type: 3}
+  m_PrefabInstance: {fileID: 7535049375327169923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &312986084
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312986081}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &324767433 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2501973467719887034, guid: 34a5b8a25a9960a4d819b5c3e5860a7b,
@@ -902,6 +927,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5889197057867238823, guid: 2f9e31a38ad9d6347bcd334a58fc875a,
         type: 2}
+    - target: {fileID: 6361973601900243509, guid: f0c3e61043403184d96f5bdce516e1ff,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[3].key
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361973601900243509, guid: f0c3e61043403184d96f5bdce516e1ff,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[3].value
+      value: 
+      objectReference: {fileID: 1673448291}
+    - target: {fileID: 6361973601900243509, guid: f0c3e61043403184d96f5bdce516e1ff,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[4].key
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361973601900243509, guid: f0c3e61043403184d96f5bdce516e1ff,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].key
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6361973601900243510, guid: f0c3e61043403184d96f5bdce516e1ff,
         type: 3}
       propertyPath: m_Name
@@ -995,6 +1040,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7535049375325515880, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: HasCap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535049375325515880, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: MaxValue
+      value: 9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535049375325515882, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535049375325515887, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: BeatSpawnerObj
+      value: 
+      objectReference: {fileID: 1673448292}
     - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
       propertyPath: BeatInteractorObjs.Array.data[0]

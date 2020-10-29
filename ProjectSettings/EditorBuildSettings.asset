@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: a1449db9afc7191408e4f50a77058b81
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/testingtongatong.unity
     guid: ead42f27e4b05ad4e9651c9e7406bd4a
+  - enabled: 1
+    path: Assets/Scenes/Tongatong.unity
+    guid: 0cc88d23f633d6240849de6b523ec277
   m_configObjects: {}

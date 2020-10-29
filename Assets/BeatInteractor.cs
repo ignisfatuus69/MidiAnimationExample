@@ -32,6 +32,7 @@ public class BeatInteractor : MonoBehaviour
         {
             EVT_OnBeatEvaluating.Invoke(BeatToEvaluate);
             Debug.Log("Early");
+            BeatToEvaluate.EVT_OnEarlyState.Invoke();
             EVT_OnBeatEvaluated.Invoke(BeatToEvaluate);
         }
 

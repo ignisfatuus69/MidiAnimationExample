@@ -11,23 +11,12 @@ public class EVENT_Beats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BeatObj.EVT_OnEarlyState.AddListener(MissedBeats);
+    //    BeatObj.EVT_OnEarlyState.AddListener(MissedBeats);
     }
 
-    private void OnEnable()
-    {
-        BeatCollider.enabled = true;
-        BeatSpriteRenderer.color = Color.white;
-    }
-
-    private void OnDisable()
-    {
-        
-    }
+    
     void MissedBeats()
     {
-
-        BeatCollider.enabled = false;
         BeatAnimator.SetTrigger("Missed");
         BeatSpriteRenderer.color = new Color(100, 100, 100, 135);
 

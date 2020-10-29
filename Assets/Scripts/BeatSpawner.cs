@@ -24,9 +24,7 @@ public class BeatSpawner : ObjectPooler
         for (int i = 0; i < BeatInteractorObjs.Length; i++)
         {
             BeatInteractorObjs[i].EVT_OnBeatEvaluated.AddListener(OnDeactivate);
-            //BeatInteractorObjs[i].EVT_OnBeatEvaluating.AddListener
         }
-
         for (int i = 0; i < PositionCounters.Length; i++)
         {
             PositionCounters[i] = 0;
@@ -47,20 +45,13 @@ public class BeatSpawner : ObjectPooler
             lastSpawnIndexes.Add(randomNumber);
         }
        
-
-        //call it here get the value across somehow
         BeatObj.EVT_OnEndState.AddListener(OnDeactivate);
 
         BeatObj.BeatAnimator.speed = this.BeatAnimationSpeed;
-
-
-
     }
   
     private void OnDeactivate(Beat BeatToDespawn)
     {
-
-        //  EVT_OnBeatPooled.Invoke(BeatToDespawn);
         // Remove the beats
         if (IsSpawningOnRandomPosition)
         { 

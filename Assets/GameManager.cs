@@ -35,4 +35,9 @@ public class GameManager : MonoBehaviour
             return;
         }
     }
+
+    private void FinishSong()
+    {
+
+    }
 }
