@@ -390,6 +390,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b512fc2bce4cf244cba102c3b845bd17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!320 &1000059183 stripped
+PlayableDirector:
+  m_CorrespondingSourceObject: {fileID: 6361973601900243509, guid: f0c3e61043403184d96f5bdce516e1ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 6361973602489114339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1343774179 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2501973466692369296, guid: 34a5b8a25a9960a4d819b5c3e5860a7b,
@@ -523,6 +529,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8430c797789784449aea39189b96a908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1673448293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673448291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db62bb30cc1590146992b1265db546df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTS: []
+  TotalBeatCount: 180
+  JsonFileName: pare
+  PD: {fileID: 1000059183}
 --- !u!224 &1792602326 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8344807942683416951, guid: df4cc329ad50a144c884c9a573b2126f,
@@ -1169,6 +1191,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1673448293}
+    - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CountBeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7535049376962012903, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
