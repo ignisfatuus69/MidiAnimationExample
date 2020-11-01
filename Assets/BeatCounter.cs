@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.Timeline;
 using UnityEngine.Playables;
 using System.IO;
-public class TimeStamps
+
+[System.Serializable]
+public class TimeStampContainer
 {
     public List<double> TimeStampsNumbers = new List<double>();
 }
@@ -12,37 +14,20 @@ public class BeatCounter : MonoBehaviour
 {
    
 
-    public TimeStamps TS = new TimeStamps();
-    public List<double> BTS = new List<double>();
+    public TimeStampContainer TimeStampToStore = new TimeStampContainer();
     public int TotalBeatCount;
     public string JsonFileName;
-    public PlayableDirector PD;
+    public PlayableDirector PlayableDirectorObj;
 
-    public string jsonBeatStamp;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        LoadJson();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void CountBeat()
     {
-        //   Debug.Log(PD.time);
-
-        //   BeatTimeStamps.Add(PD.time);
-        TS.TimeStampsNumbers.Add(PD.time);
-        if (TS.TimeStampsNumbers.Count>= TotalBeatCount)
+        TimeStampToStore.TimeStampsNumbers.Add(PlayableDirectorObj.time);
+        if (TimeStampToStore.TimeStampsNumbers.Count>= TotalBeatCount)
         {
-            Debug.Log(TS.TimeStampsNumbers.Count);
+            Debug.Log(TimeStampToStore.TimeStampsNumbers.Count);
 
-            string json = JsonUtility.ToJson(TS);
+            string json = JsonUtility.ToJson(TimeStampToStore);
 
             File.WriteAllText(Application.dataPath + "/" + JsonFileName + ".json", json);
             Debug.Log(json);
@@ -50,12 +35,7 @@ public class BeatCounter : MonoBehaviour
 
     }
 
-    public void LoadJson()
-    {
-        jsonBeatStamp = File.ReadAllText(Application.dataPath + "/" + JsonFileName + ".json");
-        TimeStamps LoadedTimeStamps = JsonUtility.FromJson<TimeStamps>(jsonBeatStamp);
-        Debug.Log(jsonBeatStamp);
-    }
+
 
   
 }

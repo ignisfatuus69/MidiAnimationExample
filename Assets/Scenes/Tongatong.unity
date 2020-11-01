@@ -390,6 +390,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b512fc2bce4cf244cba102c3b845bd17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &912999597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912999599}
+  - component: {fileID: 912999598}
+  m_Layer: 0
+  m_Name: Beat Sequencer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &912999598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912999597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52701a46a5721dc43976d8defb717c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JsonBeatStamp: 
+  JsonFileName: lastjasontest
+  BeatSpawnerObj: {fileID: 1673448292}
+  PlayableDirectorObj: {fileID: 1000059183}
+--- !u!4 &912999599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912999597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.80955064, y: 0.52192324, z: -0.6090839}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!320 &1000059183 stripped
 PlayableDirector:
   m_CorrespondingSourceObject: {fileID: 6361973601900243509, guid: f0c3e61043403184d96f5bdce516e1ff,
@@ -541,10 +588,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db62bb30cc1590146992b1265db546df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BTS: []
+  TimeStampToStore:
+    TimeStampsNumbers: []
   TotalBeatCount: 180
-  JsonFileName: pare
-  PD: {fileID: 1000059183}
+  JsonFileName: lastjasontest
+  PlayableDirectorObj: {fileID: 0}
 --- !u!224 &1792602326 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8344807942683416951, guid: df4cc329ad50a144c884c9a573b2126f,
@@ -1192,10 +1240,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7535049376962012896, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
       propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
@@ -1221,6 +1274,16 @@ PrefabInstance:
         type: 3}
       propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1673448293}
+    - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CountBeat
       objectReference: {fileID: 0}
     - target: {fileID: 7535049376962012903, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
