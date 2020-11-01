@@ -6,13 +6,18 @@ using UnityEngine.Events;
 [System.Serializable]
 
 public class OnBeatPooled : UnityEvent<Beat> { };
+
+[System.Serializable]
+public class OnBeatSpawned : UnityEvent<Beat> { };
 public class BeatSpawner : ObjectPooler
 {
     public bool IsSpawningOnRandomPosition;
     public float BeatAnimationSpeed;
 
+    public Sequencer SequencerObj;
     public BeatInteractor[] BeatInteractorObjs;
     public OnBeatPooled EVT_OnBeatPooled;
+    public OnBeatSpawned EVT_OnBeatSpawned;
     public BeatNode[] BeatContainers;
     public Vector3[] RandomBeatPositions;
     public int[] PositionCounters;
@@ -25,10 +30,7 @@ public class BeatSpawner : ObjectPooler
         {
             BeatInteractorObjs[i].EVT_OnBeatEvaluated.AddListener(OnDeactivate);
         }
-        for (int i = 0; i < PositionCounters.Length; i++)
-        {
-            PositionCounters[i] = 0;
-        }
+        SequencerObj.EVT_OnBeatTimedUp.AddListener(OnDeactivate);
     }
     protected override void InitializeSpawnObject(GameObject obj)
     {
@@ -44,10 +46,13 @@ public class BeatSpawner : ObjectPooler
             BeatContainers[randomNumber].AddBeat(BeatObj);
             lastSpawnIndexes.Add(randomNumber);
         }
-       
+        BeatObj.SequencerRef = this.SequencerObj;
+
         BeatObj.EVT_OnEndState.AddListener(OnDeactivate);
 
         BeatObj.BeatAnimator.speed = this.BeatAnimationSpeed;
+
+        EVT_OnBeatSpawned.Invoke(BeatObj);
     }
   
     private void OnDeactivate(Beat BeatToDespawn)

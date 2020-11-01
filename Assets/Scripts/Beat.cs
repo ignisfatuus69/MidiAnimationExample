@@ -18,7 +18,7 @@ public class OnEndState : UnityEvent <Beat> { };
 public enum BeatState { Early, Okay, Perfect,Late,End };
 public class Beat : MonoBehaviour
 {
-
+    public Sequencer SequencerRef;
     public Animator BeatAnimator;
     public Animation SpriteAnimation;
     public OnEarlyState EVT_OnEarlyState;
@@ -27,8 +27,9 @@ public class Beat : MonoBehaviour
     public OnLateState EVT_OnLateState;
     public OnEndState EVT_OnEndState;
     public bool IsInteractable = false;
-    public BeatState Status { get; private set; }
+    public BeatState Status { get;  set; }
     public int ScoreValue { get; private set; }
+    public double CurrentTimeStamp;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,9 +81,39 @@ public class Beat : MonoBehaviour
     {
         ScoreValue = 0;
         BeatAnimator.enabled = false;
+        Status = BeatState.Late;
         EVT_OnEndState.Invoke(this);
-        Status = BeatState.End;
+
     }
 
-    
+    private void Update()
+    {
+        // Early State
+        if (SequencerRef.PlayableDirectorObj.time >( this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime/3.25f)) 
+            && SequencerRef.PlayableDirectorObj.time < (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 2.5f)))
+        {
+
+            ActivateEarlyState();
+        }
+        // Okay State
+        if (SequencerRef.PlayableDirectorObj.time > (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 2.5f)) 
+            && SequencerRef.PlayableDirectorObj.time < (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 1.5f)))
+        {
+            ActivateOkayState();
+        }
+        // Perfect State
+        if (SequencerRef.PlayableDirectorObj.time > (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime/1.5f)) 
+            && SequencerRef.PlayableDirectorObj.time < this.CurrentTimeStamp + SequencerRef.OffSetBeatTime)
+        {
+
+            ActivatePerfectState();
+        }
+   
+
+        // Late/End State
+        if (SequencerRef.PlayableDirectorObj.time  > this.CurrentTimeStamp + SequencerRef.OffSetBeatTime)
+        {
+            ActivateEndState();
+        }
+    }
 }

@@ -419,10 +419,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52701a46a5721dc43976d8defb717c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OffSetBeatTime: 1
   JsonBeatStamp: 
   JsonFileName: lastjasontest
   BeatSpawnerObj: {fileID: 1673448292}
   PlayableDirectorObj: {fileID: 1000059183}
+  EVT_OnBeatTimedUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &912999599
 Transform:
   m_ObjectHideFlags: 0
@@ -1248,7 +1252,7 @@ PrefabInstance:
     - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
       propertyPath: noteOnEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7535049376962012901, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
@@ -1325,6 +1329,11 @@ PrefabInstance:
       propertyPath: BeatContainers.Array.data[3]
       value: 
       objectReference: {fileID: 2006121256}
+    - target: {fileID: 7535049376962012903, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: SequencerObj
+      value: 
+      objectReference: {fileID: 912999598}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3330ac24a8d9bbf4a8e141727d64da53, type: 3}
 --- !u!1001 &8344807941170801057

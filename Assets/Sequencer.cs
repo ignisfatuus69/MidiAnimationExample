@@ -4,7 +4,10 @@ using UnityEngine;
 using UnityEngine.Timeline;
 using UnityEngine.Playables;
 using System.IO;
+using UnityEngine.Events;
 
+[System.Serializable]
+public class OnBeatTimedUp : UnityEvent<Beat> { };
 public class Sequencer : MonoBehaviour
 {
     // private static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
@@ -16,11 +19,18 @@ public class Sequencer : MonoBehaviour
     private TimeStampContainer loadedTimeStamp = new TimeStampContainer();
     private int index = 0;
 
-    public GameObject TestLang;
+    public OnBeatTimedUp EVT_OnBeatTimedUp;
     
     private void Awake()
     {
         GetTimeStampFromJson();
+    }
+
+    private void Start()
+    {
+        BeatSpawnerObj.EVT_OnBeatSpawned.AddListener(SetBeatTimeStamp);
+        
+
     }
     private void GetTimeStampFromJson()
     {
@@ -31,7 +41,7 @@ public class Sequencer : MonoBehaviour
 
     private void Update()
     {
-
+        
         //We can have an offset time for the beats to spawn
         if (PlayableDirectorObj.time >= loadedTimeStamp.TimeStampsNumbers[index])
         {
@@ -40,6 +50,24 @@ public class Sequencer : MonoBehaviour
         }
     }
 
+
+    private void SetBeatTimeStamp(Beat BeatSpawned)
+    {
+        BeatSpawned.CurrentTimeStamp = loadedTimeStamp.TimeStampsNumbers[index];
+    }
+
+    private void CheckBeatTimeStamps()
+    {
+      //  for (int i = 0; i < BeatSpawnerObj.s; i++)
+      //  {
+
+      //  }
+      ////  if (PlayableDirectorObj.time > BeatToDespawn.CurrentTimeStamp )
+      //  {
+      //    //  BeatToDespawn.EVT_OnLateState.Invoke();
+      //   //   EVT_OnBeatTimedUp.Invoke(BeatToDespawn);
+      //  }
+    }
     //void SetScaling()
     //{
     //    if (Input.GetKey(KeyCode.E))

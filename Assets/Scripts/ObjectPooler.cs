@@ -19,9 +19,9 @@ public abstract class ObjectPooler : MonoBehaviour
 	public int SpawnCount = 1;
 	public float Radius = 5.0f;
 
-	protected List<GameObject> currentSpawnedObjects = new List<GameObject>();
+	public List<GameObject> currentSpawnedObjects = new List<GameObject>();
 
-	protected List<GameObject> pooledObjects = new List<GameObject>();
+	public List<GameObject> pooledObjects = new List<GameObject>();
 	public Vector3 SpawnPosition;
 
 
