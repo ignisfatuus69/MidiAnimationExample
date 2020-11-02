@@ -31,6 +31,7 @@ public class Beat : MonoBehaviour
     public BeatState Status { get;  set; }
     public int ScoreValue { get; private set; }
     public double CurrentTimeStamp;
+    public int Index = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -89,38 +90,109 @@ public class Beat : MonoBehaviour
 
     }
 
-    private void Update()
+    private void ActivateStates()
     {
-
-
         // Early State
-        if (SequencerRef.PlayableDirectorObj.time >( this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime/3.25f)) 
+        if (SequencerRef.PlayableDirectorObj.time > (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 3.25f))
             && SequencerRef.PlayableDirectorObj.time < (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 2.5f)))
         {
 
             ActivateEarlyState();
         }
         // Okay State
-        if (SequencerRef.PlayableDirectorObj.time > (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 2.5f)) 
+        if (SequencerRef.PlayableDirectorObj.time > (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 2.5f))
             && SequencerRef.PlayableDirectorObj.time < (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 1.5f)))
         {
             ActivateOkayState();
         }
         // Perfect State
-        if (SequencerRef.PlayableDirectorObj.time > (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime/1.5f)) 
+        if (SequencerRef.PlayableDirectorObj.time > (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 1.5f))
             && SequencerRef.PlayableDirectorObj.time < this.CurrentTimeStamp + SequencerRef.OffSetBeatTime)
         {
 
             ActivatePerfectState();
         }
         // Late/End State
-        if (SequencerRef.PlayableDirectorObj.time  > this.CurrentTimeStamp + SequencerRef.OffSetBeatTime)
+        if (SequencerRef.PlayableDirectorObj.time > this.CurrentTimeStamp + SequencerRef.OffSetBeatTime)
         {
             ActivateEndState();
         }
 
+    }
+
+    private void EnableBasedOnTimestamp()
+    {
+       
+
+        if (this.Index == 0)
+        {
+            Debug.Log("true");
+            this.IsInteractable = true;
+        }
+            // second beat until the last beat interactable is being managed
+
+        if (this.Index > 0 && this.Index
+           <= (SequencerRef.loadedTimeStamp.TimeStampsNumbers.Count-1))
+        {
+            // if the current time is greater than the last beat has finished, make the current beat interactable
+            if (SequencerRef.PlayableDirectorObj.time
+                >= (SequencerRef.loadedTimeStamp.TimeStampsNumbers[this.Index - 1] + SequencerRef.OffSetBeatTime))
+            {
+                this.IsInteractable = true;
+                return;
+            }
+            else
+            {
+                this.IsInteractable = false;
+            }
+        }
+
+        //{
+        //    this.IsInteractable = true;
+        //    // if the current time is greater than the last beat has finished, make the current beat interactable
+        //    //THIS LINE GETS THE EXACT TIME WHEN IT SHOULD BE ENABLED  //Debug.Log(SequencerRef.loadedTimeStamp.TimeStampsNumbers[SequencerRef.index - 2] + SequencerRef.OffSetBeatTime);
+        //    if (SequencerRef.PlayableDirectorObj.time
+        //       >= (SequencerRef.loadedTimeStamp.TimeStampsNumbers[SequencerRef.index - 2] + SequencerRef.OffSetBeatTime))
+        //    {
+        //        Debug.Log(SequencerRef.loadedTimeStamp.TimeStampsNumbers[SequencerRef.index - 2] + SequencerRef.OffSetBeatTime);
+        //        this.IsInteractable = true;
+        //        return;
+
+            //    }
+            //    else
+            //    {
+            //        this.IsInteractable = false;
+            //    }
+            //}
+            //   this.IsInteractable = true;
+            //if (SequencerRef.index == 0)    
+            //{
+            //    this.IsInteractable = true;
+            //    return;
+            //}
+            //else
+            //{
+            //    if (SequencerRef.PlayableDirectorObj.time
+            //       >= (SequencerRef.loadedTimeStamp.TimeStampsNumbers[SequencerRef.index - 1] + SequencerRef.OffSetBeatTime))
+            //    {
+            //        this.IsInteractable = true;
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        this.IsInteractable = false;
+            //    }
+            //}
+    }
+
+    private void Update()
+    {
+        EnableBasedOnTimestamp();
+        ActivateStates();
 
     }
+
+
 
 
 }

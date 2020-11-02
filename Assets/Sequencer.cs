@@ -16,8 +16,8 @@ public class Sequencer : MonoBehaviour
     public string JsonFileName;
     public BeatSpawner BeatSpawnerObj;
     public PlayableDirector PlayableDirectorObj;
-    private TimeStampContainer loadedTimeStamp = new TimeStampContainer();
-    private int index = 0;
+    public TimeStampContainer loadedTimeStamp { private set; get; } = new TimeStampContainer();
+    public int index {  set; get; } = 0;
 
     public OnBeatTimedUp EVT_OnBeatTimedUp;
 
@@ -54,15 +54,18 @@ public class Sequencer : MonoBehaviour
 
     private void SetBeatTimeStamp(Beat BeatSpawned)
     {
+        BeatSpawned.Index = this.index;
         BeatSpawned.CurrentTimeStamp = loadedTimeStamp.TimeStampsNumbers[index];
+
     }
 
     private void EnableBeatBasedOnTime(Beat BeatSpawned)
     {
-        if (index==0)
-        {
-            BeatSpawned.IsInteractable = true;
-        }
+        //if (this.index == 0)
+        //{
+        //    BeatSpawned.IsInteractable = true;
+        //    return;
+        //}
     }
     private void CheckBeatTimeStamps()
     {

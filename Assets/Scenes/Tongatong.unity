@@ -376,6 +376,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beat Nodes (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6933529010767108751, guid: fab27c9ba4400f647a2515b70731b033,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fab27c9ba4400f647a2515b70731b033, type: 3}
 --- !u!114 &656954603 stripped
@@ -548,6 +553,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beat Nodes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6933529010767108751, guid: fab27c9ba4400f647a2515b70731b033,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fab27c9ba4400f647a2515b70731b033, type: 3}
 --- !u!114 &1558657855 stripped
@@ -679,6 +689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Beat Nodes (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933529010767108751, guid: fab27c9ba4400f647a2515b70731b033,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fab27c9ba4400f647a2515b70731b033, type: 3}
@@ -1104,6 +1119,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Beat Nodes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933529010767108751, guid: fab27c9ba4400f647a2515b70731b033,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fab27c9ba4400f647a2515b70731b033, type: 3}
