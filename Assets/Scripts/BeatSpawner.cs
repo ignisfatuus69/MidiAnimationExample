@@ -57,6 +57,7 @@ public class BeatSpawner : ObjectPooler
   
     private void OnDeactivate(Beat BeatToDespawn)
     {
+
         // Remove the beats
         if (IsSpawningOnRandomPosition)
         { 
