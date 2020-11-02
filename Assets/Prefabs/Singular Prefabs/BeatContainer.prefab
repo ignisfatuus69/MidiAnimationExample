@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 8704848054303818388}
   - component: {fileID: 8704848054303818391}
   - component: {fileID: 8704848054303818390}
+  - component: {fileID: 4954382739035058651}
   m_Layer: 0
   m_Name: BeatContainer
   m_TagString: Untagged
@@ -326,6 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e9b7cc8744b4d478d3c1f238807c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SequencerRef: {fileID: 0}
   BeatAnimator: {fileID: 8704848054303818391}
   SpriteAnimation: {fileID: 0}
   EVT_OnEarlyState:
@@ -344,3 +346,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   IsInteractable: 0
+  CurrentTimeStamp: 0
+--- !u!135 &4954382739035058651
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8704848054303818377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 1}

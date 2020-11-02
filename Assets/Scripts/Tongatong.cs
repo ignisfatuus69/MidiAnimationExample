@@ -53,16 +53,16 @@ public class Tongatong : BeatInteractor
         if (Input.GetKeyDown(InputCode))
         {
             MoveDown();
-     
-    
             Ray ray = new Ray(this.transform.position, Vector3.down);
             RaycastHit hit;
             Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
             if (Physics.Raycast(ray.origin, ray.direction, out hit, 25))
             {
-                BeatNode NodeHit = hit.transform.gameObject.GetComponent<BeatNode>();
-                EvaluateBeatNode(NodeHit);
-
+                // BeatNode NodeHit = hit.transform.gameObject.GetComponent<BeatNode>();
+                //  EvaluateBeatNode(NodeHit);
+                Debug.Log("hit something");
+                Beat BeatHit = hit.transform.gameObject.GetComponent<Beat>();
+                EvaluateBeatStates(BeatHit);
 
             }
 

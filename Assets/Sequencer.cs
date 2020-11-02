@@ -20,7 +20,7 @@ public class Sequencer : MonoBehaviour
     private int index = 0;
 
     public OnBeatTimedUp EVT_OnBeatTimedUp;
-    
+
     private void Awake()
     {
         GetTimeStampFromJson();
@@ -29,7 +29,8 @@ public class Sequencer : MonoBehaviour
     private void Start()
     {
         BeatSpawnerObj.EVT_OnBeatSpawned.AddListener(SetBeatTimeStamp);
-        
+        BeatSpawnerObj.EVT_OnBeatSpawned.AddListener(EnableBeatBasedOnTime);
+
 
     }
     private void GetTimeStampFromJson()
@@ -41,7 +42,7 @@ public class Sequencer : MonoBehaviour
 
     private void Update()
     {
-        
+
         //We can have an offset time for the beats to spawn
         if (PlayableDirectorObj.time >= loadedTimeStamp.TimeStampsNumbers[index])
         {
@@ -56,17 +57,16 @@ public class Sequencer : MonoBehaviour
         BeatSpawned.CurrentTimeStamp = loadedTimeStamp.TimeStampsNumbers[index];
     }
 
+    private void EnableBeatBasedOnTime(Beat BeatSpawned)
+    {
+        if (index==0)
+        {
+            BeatSpawned.IsInteractable = true;
+        }
+    }
     private void CheckBeatTimeStamps()
     {
-      //  for (int i = 0; i < BeatSpawnerObj.s; i++)
-      //  {
-
-      //  }
-      ////  if (PlayableDirectorObj.time > BeatToDespawn.CurrentTimeStamp )
-      //  {
-      //    //  BeatToDespawn.EVT_OnLateState.Invoke();
-      //   //   EVT_OnBeatTimedUp.Invoke(BeatToDespawn);
-      //  }
+    
     }
     //void SetScaling()
     //{

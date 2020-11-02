@@ -26,7 +26,8 @@ public class BeatInteractor : MonoBehaviour
 
     protected virtual void EvaluateBeatStates(Beat BeatToEvaluate)
     {
- 
+
+        if (!BeatToEvaluate.IsInteractable) return;
         EVT_OnBeatInteraction.Invoke(BeatToEvaluate);
         if (BeatToEvaluate.Status == BeatState.Early)
         {

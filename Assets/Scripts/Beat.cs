@@ -18,6 +18,7 @@ public class OnEndState : UnityEvent <Beat> { };
 public enum BeatState { Early, Okay, Perfect,Late,End };
 public class Beat : MonoBehaviour
 {
+ 
     public Sequencer SequencerRef;
     public Animator BeatAnimator;
     public Animation SpriteAnimation;
@@ -38,6 +39,7 @@ public class Beat : MonoBehaviour
 
     private void OnEnable()
     {
+
         ScoreValue = 0;
         BeatAnimator.enabled = true;
         BeatAnimator.Play(0, -1, 0);
@@ -46,6 +48,7 @@ public class Beat : MonoBehaviour
     private void OnDisable()
     {
         BeatAnimator.playbackTime = 0;
+        IsInteractable = false;
     }
 
     private void ActivateEarlyState()
@@ -88,6 +91,8 @@ public class Beat : MonoBehaviour
 
     private void Update()
     {
+
+
         // Early State
         if (SequencerRef.PlayableDirectorObj.time >( this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime/3.25f)) 
             && SequencerRef.PlayableDirectorObj.time < (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 2.5f)))
@@ -108,12 +113,14 @@ public class Beat : MonoBehaviour
 
             ActivatePerfectState();
         }
-   
-
         // Late/End State
         if (SequencerRef.PlayableDirectorObj.time  > this.CurrentTimeStamp + SequencerRef.OffSetBeatTime)
         {
             ActivateEndState();
         }
+
+
     }
+
+
 }

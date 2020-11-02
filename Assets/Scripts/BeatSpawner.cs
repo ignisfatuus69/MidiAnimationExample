@@ -42,9 +42,9 @@ public class BeatSpawner : ObjectPooler
             SpawnPosition = BeatContainers[randomNumber].Position;
 
 
-            PositionCounters[randomNumber] += 1;
-            BeatContainers[randomNumber].AddBeat(BeatObj);
-            lastSpawnIndexes.Add(randomNumber);
+         //   PositionCounters[randomNumber] += 1;
+         //   BeatContainers[randomNumber].AddBeat(BeatObj);
+       //     lastSpawnIndexes.Add(randomNumber);
         }
         BeatObj.SequencerRef = this.SequencerObj;
 
@@ -57,14 +57,14 @@ public class BeatSpawner : ObjectPooler
   
     private void OnDeactivate(Beat BeatToDespawn)
     {
-
+        
         // Remove the beats
-        if (IsSpawningOnRandomPosition)
-        { 
-        PositionCounters[lastSpawnIndexes[0]] -= 1;
-        BeatContainers[lastSpawnIndexes[0]].RemoveBeat(BeatToDespawn);
-        lastSpawnIndexes.RemoveAt(0);
-        }
+        //if (IsSpawningOnRandomPosition)
+        //{ 
+        //PositionCounters[lastSpawnIndexes[0]] -= 1;
+        //BeatContainers[lastSpawnIndexes[0]].RemoveBeat(BeatToDespawn);
+        //lastSpawnIndexes.RemoveAt(0);
+        //}
 
 
         EVT_OnBeatPooled.Invoke(BeatToDespawn);
