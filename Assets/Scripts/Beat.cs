@@ -18,16 +18,21 @@ public class OnEndState : UnityEvent <Beat> { };
 public enum BeatState { Early, Okay, Perfect,Late,End };
 public class Beat : MonoBehaviour
 {
- 
+    public SpriteRenderer BeatSpriteRenderer;
+    public SpriteRenderer RingSpriteRenderer;
+    public Transform RingTransform;
+
     public Sequencer SequencerRef;
     public Animator BeatAnimator;
     public Animation SpriteAnimation;
+
     public OnEarlyState EVT_OnEarlyState;
     public OnOkayState EVT_OnOkayState;
     public OnPerfectState EVT_OnPerfectState;
     public OnLateState EVT_OnLateState;
     public OnEndState EVT_OnEndState;
     public SphereCollider BeatCollider;
+
     public bool IsInteractable = false;
     public BeatState Status { get;  set; }
     public int ScoreValue { get; private set; }
@@ -37,14 +42,18 @@ public class Beat : MonoBehaviour
     void Start()
     {
         ScoreValue = 0;
+
     }
 
     private void OnEnable()
     {
 
         ScoreValue = 0;
-        BeatAnimator.enabled = true;
-        BeatAnimator.Play(0, -1, 0);
+        //BeatAnimator.enabled = true;
+       // BeatAnimator.Play(0, -1, 0);
+        StartCoroutine(ScaleBeatBasedOnTime(RingTransform, new Vector3(0.87f, 0.87f, 0.87f), 1));
+        StartCoroutine(SetBeatColorBasedOnTime(BeatSpriteRenderer, new Vector4(1, 1, 1,1), 2));
+        StartCoroutine(SetRingColorBasedOnTime(RingSpriteRenderer, new Vector4(1, 1, 1, 1), 2));
     }
 
     private void OnDisable()
@@ -52,6 +61,10 @@ public class Beat : MonoBehaviour
         BeatAnimator.playbackTime = 0;
         IsInteractable = false;
         this.BeatCollider.enabled = false;
+
+        RingTransform.localScale = new Vector3(2,2,2);
+        BeatSpriteRenderer.color = new Color(0.25f, 0.25f, 0.25f, 0.25f);
+        RingSpriteRenderer.color = new Color(0.25f, 0.25f, 0.25f, 0.25f);
     }
 
     private void ActivateEarlyState()
@@ -151,44 +164,55 @@ public class Beat : MonoBehaviour
                
             }
         }
-
-        //{
-        //    this.IsInteractable = true;
-        //    // if the current time is greater than the last beat has finished, make the current beat interactable
-        //    //THIS LINE GETS THE EXACT TIME WHEN IT SHOULD BE ENABLED  //Debug.Log(SequencerRef.loadedTimeStamp.TimeStampsNumbers[SequencerRef.index - 2] + SequencerRef.OffSetBeatTime);
-        //    if (SequencerRef.PlayableDirectorObj.time
-        //       >= (SequencerRef.loadedTimeStamp.TimeStampsNumbers[SequencerRef.index - 2] + SequencerRef.OffSetBeatTime))
-        //    {
-        //        Debug.Log(SequencerRef.loadedTimeStamp.TimeStampsNumbers[SequencerRef.index - 2] + SequencerRef.OffSetBeatTime);
-        //        this.IsInteractable = true;
-        //        return;
-
-            //    }
-            //    else
-            //    {
-            //        this.IsInteractable = false;
-            //    }
-            //}
-            //   this.IsInteractable = true;
-            //if (SequencerRef.index == 0)    
-            //{
-            //    this.IsInteractable = true;
-            //    return;
-            //}
-            //else
-            //{
-            //    if (SequencerRef.PlayableDirectorObj.time
-            //       >= (SequencerRef.loadedTimeStamp.TimeStampsNumbers[SequencerRef.index - 1] + SequencerRef.OffSetBeatTime))
-            //    {
-            //        this.IsInteractable = true;
-            //        return;
-            //    }
-            //    else
-            //    {
-            //        this.IsInteractable = false;
-            //    }
-            //}
     }
+    public IEnumerator MoveToPosition(Transform transform, Vector3 position, float timeToMove)
+    {
+        var currentPos = transform.position;
+        var t = 0f;
+        while (t < 1)
+        {
+            t += Time.deltaTime / timeToMove;
+            transform.position = Vector3.Lerp(currentPos, position, t);
+            yield return null;
+        }
+    }
+
+    //Copy Pasta Galore
+    IEnumerator ScaleBeatBasedOnTime(Transform ObjectToScale, Vector3 TargetScale, float TimeToScale)
+    {
+        Vector3 CurrentScale = ObjectToScale.transform.localScale;
+        float time = 0f;
+        while (time < 1)
+        {
+            time += Time.deltaTime / TimeToScale;
+            RingTransform.localScale = Vector3.Lerp(CurrentScale, TargetScale, time);
+            yield return null;
+        }
+    }
+    IEnumerator SetBeatColorBasedOnTime(SpriteRenderer SpriteRendererRef, Vector4 TargetColor, float TimeToScale)
+    {
+        Color SpriteColor = SpriteRendererRef.color;
+        float time = 0f;
+        while (time < 1)
+        {
+            time += Time.deltaTime / TimeToScale;
+            BeatSpriteRenderer.color = Vector4.Lerp(SpriteColor, TargetColor, time);
+            yield return null;
+        }
+    }
+
+    IEnumerator SetRingColorBasedOnTime(SpriteRenderer SpriteRendererRef, Vector4 TargetColor, float TimeToScale)
+    {
+        Color SpriteColor = SpriteRendererRef.color;
+        float time = 0f;
+        while (time < 1)
+        {
+            time += Time.deltaTime / TimeToScale;
+            RingSpriteRenderer.color = Vector4.Lerp(SpriteColor, TargetColor, time);
+            yield return null;
+        }
+    }
+
 
     private void Update()
     {

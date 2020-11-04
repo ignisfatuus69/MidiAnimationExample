@@ -304,7 +304,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8704848054303818377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 13bddef46c8da8c4ea65526bea4cc62f, type: 2}
   m_CullingMode: 0
@@ -327,6 +327,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e9b7cc8744b4d478d3c1f238807c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BeatSpriteRenderer: {fileID: 3810293692445042663}
+  RingSpriteRenderer: {fileID: 673571983336704662}
+  RingTransform: {fileID: 8123355603829292028}
   SequencerRef: {fileID: 0}
   BeatAnimator: {fileID: 8704848054303818391}
   SpriteAnimation: {fileID: 0}
