@@ -27,6 +27,7 @@ public class Beat : MonoBehaviour
     public OnPerfectState EVT_OnPerfectState;
     public OnLateState EVT_OnLateState;
     public OnEndState EVT_OnEndState;
+    public SphereCollider BeatCollider;
     public bool IsInteractable = false;
     public BeatState Status { get;  set; }
     public int ScoreValue { get; private set; }
@@ -50,6 +51,7 @@ public class Beat : MonoBehaviour
     {
         BeatAnimator.playbackTime = 0;
         IsInteractable = false;
+        this.BeatCollider.enabled = false;
     }
 
     private void ActivateEarlyState()
@@ -139,11 +141,14 @@ public class Beat : MonoBehaviour
                 >= (SequencerRef.loadedTimeStamp.TimeStampsNumbers[this.Index - 1] + SequencerRef.OffSetBeatTime))
             {
                 this.IsInteractable = true;
+                this.BeatCollider.center = new Vector3(0, 0, 1);
                 return;
             }
             else
             {
+                this.BeatCollider.center = new Vector3(0, 0, 0);
                 this.IsInteractable = false;
+               
             }
         }
 

@@ -345,8 +345,10 @@ MonoBehaviour:
   EVT_OnEndState:
     m_PersistentCalls:
       m_Calls: []
+  BeatCollider: {fileID: 4954382739035058651}
   IsInteractable: 0
   CurrentTimeStamp: 0
+  Index: 0
 --- !u!135 &4954382739035058651
 SphereCollider:
   m_ObjectHideFlags: 0

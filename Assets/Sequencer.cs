@@ -12,7 +12,7 @@ public class Sequencer : MonoBehaviour
 {
     // private static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
     public float OffSetBeatTime;
-    public string JsonBeatStamp;
+    public string JsonBeatStamp { private set; get; }
     public string JsonFileName;
     public BeatSpawner BeatSpawnerObj;
     public PlayableDirector PlayableDirectorObj;
