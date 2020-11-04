@@ -29,7 +29,6 @@ public class Sequencer : MonoBehaviour
     private void Start()
     {
         BeatSpawnerObj.EVT_OnBeatSpawned.AddListener(SetBeatTimeStamp);
-        BeatSpawnerObj.EVT_OnBeatSpawned.AddListener(EnableBeatBasedOnTime);
 
 
     }
@@ -59,30 +58,4 @@ public class Sequencer : MonoBehaviour
 
     }
 
-    private void EnableBeatBasedOnTime(Beat BeatSpawned)
-    {
-        //if (this.index == 0)
-        //{
-        //    BeatSpawned.IsInteractable = true;
-        //    return;
-        //}
-    }
-    private void CheckBeatTimeStamps()
-    {
-    
-    }
-    //void SetScaling()
-    //{
-    //    if (Input.GetKey(KeyCode.E))
-    //    {
-    //        TestLang.transform.localScale =  Vector3.Lerp(TestLang.transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), 1*Time.deltaTime);
-
-    //        //Scale the objects by lerping from offset time to actual loadedTimeStampTime
-    //    }
-    //}
-
-    //IEnumerator ScaleBySeconds(float Seconds)
-    //{
-
-    //}
 }

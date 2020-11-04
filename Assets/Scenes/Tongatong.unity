@@ -425,7 +425,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OffSetBeatTime: 1
-  JsonBeatStamp: 
   JsonFileName: lastjasontest
   BeatSpawnerObj: {fileID: 1673448292}
   PlayableDirectorObj: {fileID: 1000059183}
@@ -1264,6 +1263,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7535049376125256212, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: SequencerRef
+      value: 
+      objectReference: {fileID: 912999598}
     - target: {fileID: 7535049376962012896, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
       propertyPath: m_IsActive

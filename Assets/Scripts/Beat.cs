@@ -49,11 +49,9 @@ public class Beat : MonoBehaviour
     {
 
         ScoreValue = 0;
-        //BeatAnimator.enabled = true;
-       // BeatAnimator.Play(0, -1, 0);
-        StartCoroutine(ScaleBeatBasedOnTime(RingTransform, new Vector3(0.87f, 0.87f, 0.87f), 1));
-        StartCoroutine(SetBeatColorBasedOnTime(BeatSpriteRenderer, new Vector4(1, 1, 1,1), 2));
-        StartCoroutine(SetRingColorBasedOnTime(RingSpriteRenderer, new Vector4(1, 1, 1, 1), 2));
+        StartCoroutine(DelayAnimationSetters());
+        // need to start late
+       
     }
 
     private void OnDisable()
@@ -213,6 +211,13 @@ public class Beat : MonoBehaviour
         }
     }
 
+    IEnumerator DelayAnimationSetters()
+    {
+        yield return new WaitForSeconds(0.05f);
+        StartCoroutine(ScaleBeatBasedOnTime(RingTransform, new Vector3(0.87f, 0.87f, 0.87f), SequencerRef.OffSetBeatTime));
+        StartCoroutine(SetBeatColorBasedOnTime(BeatSpriteRenderer, new Vector4(1, 1, 1, 1), SequencerRef.OffSetBeatTime * 2));
+        StartCoroutine(SetRingColorBasedOnTime(RingSpriteRenderer, new Vector4(1, 1, 1, 1), SequencerRef.OffSetBeatTime * 2));
+    }
 
     private void Update()
     {

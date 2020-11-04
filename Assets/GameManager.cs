@@ -8,36 +8,23 @@ public class GameManager : MonoBehaviour
     public float EasySpeed, MediumSpeed, HardSpeed;
     public BeatSpawner BeatSpawnerObj;
     public GameDifficulty GameDifficultyOptions;
+    public Sequencer SequencerRef;
     // Start is called before the first frame update
     void Start()
     {
-        SetDifficultyParameters();
+
     }
 
-
-
-    private void SetDifficultyParameters()
+    private void EnableSpawner()
     {
-        //Set Points Bonuses for Harder Difficulties ?
-        if (GameDifficultyOptions == GameDifficulty.Easy)
+        if (SequencerRef.PlayableDirectorObj.time - 1 >= SequencerRef.loadedTimeStamp.TimeStampsNumbers[0])
         {
-            BeatSpawnerObj.BeatAnimationSpeed = EasySpeed;
-            return;
-        }
-        if (GameDifficultyOptions == GameDifficulty.Medium)
-        {
-            BeatSpawnerObj.BeatAnimationSpeed = MediumSpeed;
-            return;
-        }
-        if (GameDifficultyOptions == GameDifficulty.Hard)
-        {
-            BeatSpawnerObj.BeatAnimationSpeed = HardSpeed;
-            return;
+            BeatSpawnerObj.gameObject.SetActive(true);
         }
     }
 
-    private void FinishSong()
+    private void Update()
     {
-
+        EnableSpawner();
     }
 }
