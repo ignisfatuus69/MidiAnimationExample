@@ -57,8 +57,10 @@ public class Beat : MonoBehaviour
     private void OnDisable()
     {
         BeatAnimator.playbackTime = 0;
+
+        this.BeatCollider.center = new Vector3(0, 0, 0);
         IsInteractable = false;
-        this.BeatCollider.enabled = false;
+    
 
         RingTransform.localScale = new Vector3(2,2,2);
         BeatSpriteRenderer.color = new Color(0.25f, 0.25f, 0.25f, 0.25f);
@@ -116,18 +118,20 @@ public class Beat : MonoBehaviour
         if (SequencerRef.PlayableDirectorObj.time > (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 2.5f))
             && SequencerRef.PlayableDirectorObj.time < (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 1.5f)))
         {
+            //
             ActivateOkayState();
         }
         // Perfect State
         if (SequencerRef.PlayableDirectorObj.time > (this.CurrentTimeStamp + (SequencerRef.OffSetBeatTime / 1.5f))
             && SequencerRef.PlayableDirectorObj.time < this.CurrentTimeStamp + SequencerRef.OffSetBeatTime)
         {
-
+            //
             ActivatePerfectState();
         }
         // Late/End State
         if (SequencerRef.PlayableDirectorObj.time > this.CurrentTimeStamp + SequencerRef.OffSetBeatTime)
         {
+
             ActivateEndState();
         }
 
@@ -141,6 +145,7 @@ public class Beat : MonoBehaviour
         {
             Debug.Log("true");
             this.IsInteractable = true;
+            this.BeatCollider.center = new Vector3(0, 0, 1);
         }
             // second beat until the last beat interactable is being managed
 
@@ -148,30 +153,22 @@ public class Beat : MonoBehaviour
            <= (SequencerRef.loadedTimeStamp.TimeStampsNumbers.Count-1))
         {
             // if the current time is greater than the last beat has finished, make the current beat interactable
-            if (SequencerRef.PlayableDirectorObj.time
-                >= (SequencerRef.loadedTimeStamp.TimeStampsNumbers[this.Index - 1] + SequencerRef.OffSetBeatTime))
+            if (SequencerRef.CurrentInteractedBeatIndex == this.Index)
+            //if (SequencerRef.PlayableDirectorObj.time
+            //    >= (SequencerRef.loadedTimeStamp.TimeStampsNumbers[this.Index - 1] + SequencerRef.OffSetBeatTime) )
             {
                 this.IsInteractable = true;
                 this.BeatCollider.center = new Vector3(0, 0, 1);
                 return;
             }
-            else
-            {
-                this.BeatCollider.center = new Vector3(0, 0, 0);
-                this.IsInteractable = false;
+
+            // if the beat before yours isnt active anymore
+            //else
+            //{
+            //    this.BeatCollider.center = new Vector3(0, 0, 0);
+            //    this.IsInteractable = false;
                
-            }
-        }
-    }
-    public IEnumerator MoveToPosition(Transform transform, Vector3 position, float timeToMove)
-    {
-        var currentPos = transform.position;
-        var t = 0f;
-        while (t < 1)
-        {
-            t += Time.deltaTime / timeToMove;
-            transform.position = Vector3.Lerp(currentPos, position, t);
-            yield return null;
+            //}
         }
     }
 
@@ -214,9 +211,9 @@ public class Beat : MonoBehaviour
     IEnumerator DelayAnimationSetters()
     {
         yield return new WaitForSeconds(0.05f);
-        StartCoroutine(ScaleBeatBasedOnTime(RingTransform, new Vector3(0.87f, 0.87f, 0.87f), SequencerRef.OffSetBeatTime));
-        StartCoroutine(SetBeatColorBasedOnTime(BeatSpriteRenderer, new Vector4(1, 1, 1, 1), SequencerRef.OffSetBeatTime * 2));
-        StartCoroutine(SetRingColorBasedOnTime(RingSpriteRenderer, new Vector4(1, 1, 1, 1), SequencerRef.OffSetBeatTime * 2));
+        StartCoroutine(ScaleBeatBasedOnTime(RingTransform, new Vector3(0.87f, 0.87f, 0.87f), SequencerRef.OffSetBeatTime - (SequencerRef.OffSetBeatTime/4)));
+        StartCoroutine(SetBeatColorBasedOnTime(BeatSpriteRenderer, new Vector4(1, 1, 1, 1), SequencerRef.OffSetBeatTime * 1.25f));
+        StartCoroutine(SetRingColorBasedOnTime(RingSpriteRenderer, new Vector4(1, 1, 1, 1), SequencerRef.OffSetBeatTime * 1.25f));
     }
 
     private void Update()

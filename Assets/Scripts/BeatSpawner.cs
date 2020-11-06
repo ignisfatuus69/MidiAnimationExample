@@ -67,6 +67,7 @@ public class BeatSpawner : ObjectPooler
 
     public void RandomizeBeatPosition()
     {
+
         int randomNumber = Random.Range(0, RandomBeatPositions.Length);
         SpawnPosition = BeatContainers[randomNumber].Position;
 

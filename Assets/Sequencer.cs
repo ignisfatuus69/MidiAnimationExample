@@ -20,6 +20,7 @@ public class Sequencer : MonoBehaviour
     public int index {  set; get; } = 0;
 
     public OnBeatTimedUp EVT_OnBeatTimedUp;
+    public int CurrentInteractedBeatIndex { private set; get; } = 0;
 
     private void Awake()
     {
@@ -29,7 +30,7 @@ public class Sequencer : MonoBehaviour
     private void Start()
     {
         BeatSpawnerObj.EVT_OnBeatSpawned.AddListener(SetBeatTimeStamp);
-
+        BeatSpawnerObj.EVT_OnBeatPooled.AddListener(CountBeatBasedOnSpawner);
 
     }
     private void GetTimeStampFromJson()
@@ -56,6 +57,12 @@ public class Sequencer : MonoBehaviour
         BeatSpawned.Index = this.index;
         BeatSpawned.CurrentTimeStamp = loadedTimeStamp.TimeStampsNumbers[index];
 
+    }
+
+    private void CountBeatBasedOnSpawner(Beat BeatHit)
+    {
+        //Last Beat that we hit is just -1 away
+        CurrentInteractedBeatIndex += 1;
     }
 
 }

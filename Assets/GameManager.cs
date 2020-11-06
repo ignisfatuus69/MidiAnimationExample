@@ -9,22 +9,22 @@ public class GameManager : MonoBehaviour
     public BeatSpawner BeatSpawnerObj;
     public GameDifficulty GameDifficultyOptions;
     public Sequencer SequencerRef;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
+
+
 
     private void EnableSpawner()
     {
-        if (SequencerRef.PlayableDirectorObj.time - 1 >= SequencerRef.loadedTimeStamp.TimeStampsNumbers[0])
-        {
-            BeatSpawnerObj.gameObject.SetActive(true);
-        }
+        //if (SequencerRef.PlayableDirectorObj.time  >= (SequencerRef.loadedTimeStamp.TimeStampsNumbers[0] - 1))
+        //{
+        //    BeatSpawnerObj.gameObject.SetActive(true);
+        //}
     }
 
     private void Update()
     {
         EnableSpawner();
     }
+
+  
 }
