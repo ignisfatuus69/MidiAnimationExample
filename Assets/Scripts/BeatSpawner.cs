@@ -18,10 +18,10 @@ public class BeatSpawner : ObjectPooler
     public BeatInteractor[] BeatInteractorObjs;
     public OnBeatPooled EVT_OnBeatPooled;
     public OnBeatSpawned EVT_OnBeatSpawned;
-    public BeatNode[] BeatContainers;
-    public Vector3[] RandomBeatPositions;
-    public int[] PositionCounters;
-    private List<int> lastSpawnIndexes = new List<int>();
+
+    public Vector3[] BeatSpawnPoints;
+    private int[] SpawnIndexes;
+    private int BeatsSpawned = 0;
     //  public BeatManager BeatManagerObj;
 
     private void Start()
@@ -31,17 +31,15 @@ public class BeatSpawner : ObjectPooler
             BeatInteractorObjs[i].EVT_OnBeatEvaluated.AddListener(OnDeactivate);
         }
         SequencerObj.EVT_OnBeatTimedUp.AddListener(OnDeactivate);
+        SpawnIndexes = SequencerObj.BeatSequencerInfo.SpawnPointIndex.ToArray();
     }
     protected override void InitializeSpawnObject(GameObject obj)
     {
         //add for automatic pooling
-        Beat BeatObj = obj.GetComponent<Beat>();
-        if (IsSpawningOnRandomPosition)
-        {
-            int randomNumber = Random.Range(0, RandomBeatPositions.Length);
-            SpawnPosition = BeatContainers[randomNumber].Position;
 
-        }
+        Beat BeatObj = obj.GetComponent<Beat>();
+
+        SetBeatPosition();
         BeatObj.SequencerRef = this.SequencerObj;
 
         BeatObj.EVT_OnEndState.AddListener(OnDeactivate);
@@ -65,16 +63,12 @@ public class BeatSpawner : ObjectPooler
             
     }
 
-    public void RandomizeBeatPosition()
+    public void SetBeatPosition()
     {
+        SpawnPosition = BeatSpawnPoints[SpawnIndexes[BeatsSpawned]];
+        BeatsSpawned += 1;
 
-        int randomNumber = Random.Range(0, RandomBeatPositions.Length);
-        SpawnPosition = BeatContainers[randomNumber].Position;
 
-
-        PositionCounters[randomNumber] += 1;
-
-        lastSpawnIndexes.Add(randomNumber);
     }
 
 

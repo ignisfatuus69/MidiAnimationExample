@@ -143,14 +143,13 @@ public class Beat : MonoBehaviour
 
         if (this.Index == 0)
         {
-            Debug.Log("true");
             this.IsInteractable = true;
             this.BeatCollider.center = new Vector3(0, 0, 1);
         }
             // second beat until the last beat interactable is being managed
 
         if (this.Index > 0 && this.Index
-           <= (SequencerRef.loadedTimeStamp.TimeStampsNumbers.Count-1))
+           <= (SequencerRef.BeatSequencerInfo.TimeStampsNumbers.Count-1))
         {
             // if the current time is greater than the last beat has finished, make the current beat interactable
             if (SequencerRef.CurrentInteractedBeatIndex == this.Index)

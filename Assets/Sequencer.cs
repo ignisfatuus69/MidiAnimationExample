@@ -16,7 +16,8 @@ public class Sequencer : MonoBehaviour
     public string JsonFileName;
     public BeatSpawner BeatSpawnerObj;
     public PlayableDirector PlayableDirectorObj;
-    public TimeStampContainer loadedTimeStamp { private set; get; } = new TimeStampContainer();
+    public BeatSequencerInfo BeatSequencerInfo { private set; get; } = new BeatSequencerInfo();
+
     public int index {  set; get; } = 0;
 
     public OnBeatTimedUp EVT_OnBeatTimedUp;
@@ -36,7 +37,7 @@ public class Sequencer : MonoBehaviour
     private void GetTimeStampFromJson()
     {
         JsonBeatStamp = File.ReadAllText(Application.dataPath + "/" + JsonFileName + ".json");
-        loadedTimeStamp = JsonUtility.FromJson<TimeStampContainer>(JsonBeatStamp);
+        BeatSequencerInfo = JsonUtility.FromJson<BeatSequencerInfo>(JsonBeatStamp);
         Debug.Log(JsonBeatStamp);
     }
 
@@ -44,7 +45,7 @@ public class Sequencer : MonoBehaviour
     {
 
         //We can have an offset time for the beats to spawn
-        if (PlayableDirectorObj.time >= loadedTimeStamp.TimeStampsNumbers[index])
+        if (PlayableDirectorObj.time >= BeatSequencerInfo.TimeStampsNumbers[index])
         {
             BeatSpawnerObj.SpawnObjects();
             index += 1;
@@ -55,7 +56,7 @@ public class Sequencer : MonoBehaviour
     private void SetBeatTimeStamp(Beat BeatSpawned)
     {
         BeatSpawned.Index = this.index;
-        BeatSpawned.CurrentTimeStamp = loadedTimeStamp.TimeStampsNumbers[index];
+        BeatSpawned.CurrentTimeStamp = BeatSequencerInfo.TimeStampsNumbers[index];
 
     }
 

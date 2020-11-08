@@ -28,7 +28,7 @@ public class Testlang : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            BeatSpawnerobj.RandomizeBeatPosition();
+            BeatSpawnerobj.SetBeatPosition();
             BeatSpawnerobj.SpawnObjects();
         }
     }
