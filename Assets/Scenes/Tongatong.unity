@@ -1574,7 +1574,12 @@ PrefabInstance:
     - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
       propertyPath: FeedbackObject.Array.size
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: FeedbackSprites.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
@@ -1611,13 +1616,61 @@ PrefabInstance:
         type: 3}
       propertyPath: FeedbackObject.Array.data[0]
       value: 
-      objectReference: {fileID: 8275127890518990952, guid: 2932a177b5c1ba54f9ca063a58c0e167,
+      objectReference: {fileID: 4003953237994286698, guid: 5b7153a71fb6b624080b9b89e090ce4a,
         type: 3}
     - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
       propertyPath: TimeToDespawn
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: FeedbackObject.Array.data[1]
+      value: 
+      objectReference: {fileID: 8275127890518990952, guid: 2932a177b5c1ba54f9ca063a58c0e167,
+        type: 3}
+    - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: FeedbackObject.Array.data[2]
+      value: 
+      objectReference: {fileID: 3055643612828683651, guid: 16fc31c592779d44e9a97ee16181ff6b,
+        type: 3}
+    - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: FeedbackSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: cf7aeea6219763b4a965c42acfa44eb5,
+        type: 3}
+    - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: FeedbackSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cf7aeea6219763b4a965c42acfa44eb5,
+        type: 3}
+    - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: FeedbackSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 486696ff1764d134183754f29113e21b,
+        type: 3}
+    - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: FeedbackSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6e2f1c602c626b4419863481081e7a4d,
+        type: 3}
+    - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: FeedbackSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 863891aea5212714ab4b105f473482bb,
+        type: 3}
+    - target: {fileID: 7535049375608203664, guid: 3330ac24a8d9bbf4a8e141727d64da53,
+        type: 3}
+      propertyPath: FeedbackSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 671e4a83e4af5d44e918a2b1ef7de146,
+        type: 3}
     - target: {fileID: 7535049375733332797, guid: 3330ac24a8d9bbf4a8e141727d64da53,
         type: 3}
       propertyPath: TongatongObj.Array.data[0]

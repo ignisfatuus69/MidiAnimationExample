@@ -11,8 +11,8 @@ public class BeatFeedbackSpawner : ObjectPooler
     public BeatSpawner BeatSpawnerobj;
     public Transform CanvasParent;
     public float TimeToDespawn;
-    public GameObject[] FeedbackObject;
-    
+    public Sprite[] FeedbackSprites;
+    private BeatState CurrentBeatStatus;
 
     private void Start()
     {
@@ -21,7 +21,26 @@ public class BeatFeedbackSpawner : ObjectPooler
     }
     protected override void InitializeSpawnObject(GameObject obj)
     {
-     
+
+        Debug.Log(CurrentBeatStatus);
+  
+        if (CurrentBeatStatus == BeatState.Early)
+        {
+            obj.GetComponent<SpriteSetter>().SetSprites(FeedbackSprites[0],null);
+        }
+        if (CurrentBeatStatus == BeatState.Okay)
+        {
+            obj.GetComponent<SpriteSetter>().SetSprites(FeedbackSprites[1], FeedbackSprites[2]);
+        }
+        if (CurrentBeatStatus == BeatState.Perfect)
+        {
+            obj.GetComponent<SpriteSetter>().SetSprites(FeedbackSprites[3], FeedbackSprites[4]);
+        }
+        if (CurrentBeatStatus == BeatState.Late)
+        {
+            obj.GetComponent<SpriteSetter>().SetSprites(FeedbackSprites[0], null);
+        }
+
         StartCoroutine(DespawnInSeconds(obj));
     }
 
@@ -34,12 +53,11 @@ public class BeatFeedbackSpawner : ObjectPooler
 
     private void InitializeObjectBasedOnBeat(Beat BeatObjReference)
     {
-        if (BeatObjReference.Status == BeatState.Early) ObjectToSpawn = FeedbackObject[0];
-        if (BeatObjReference.Status == BeatState.Okay) ObjectToSpawn = FeedbackObject[0];
-        if (BeatObjReference.Status == BeatState.Perfect) ObjectToSpawn = FeedbackObject[0];
-        if (BeatObjReference.Status == BeatState.Late) ObjectToSpawn = FeedbackObject[0];
         SpawnPosition = BeatObjReference.transform.position;
+        CurrentBeatStatus = BeatObjReference.Status;
     }
+
+
 
     IEnumerator DespawnInSeconds(GameObject objToDespawn)
     {
