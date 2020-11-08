@@ -56,6 +56,7 @@ public class Beat : MonoBehaviour
 
     private void OnDisable()
     {
+        Status = BeatState.Early;
         BeatAnimator.playbackTime = 0;
 
         this.BeatCollider.center = new Vector3(0, 0, 0);
