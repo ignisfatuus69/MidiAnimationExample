@@ -1,0 +1,5200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8658110324994444388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b22792c3b570444eb18cb78c2af3a74, type: 3}
+  m_Name: Audio Track (1)
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 1
+    m_ClipIn: 0
+    m_Asset: {fileID: 7070138411646475629}
+    m_Duration: 162.52403628117915
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -8658110324994444388}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Palm Breeze-Full Song
+  m_Markers:
+    m_Objects: []
+  m_TrackProperties:
+    volume: 1
+    stereoPan: 0
+    spatialBlend: 0
+--- !u!114 &-8544812208850799617
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69fd8133db33f2546993a421d269f5f6, type: 3}
+  m_Name: Midi Animation Track (1)
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 0
+    m_ClipIn: 0
+    m_Asset: {fileID: 2856353806784410514}
+    m_Duration: 162.6666717529297
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -8544812208850799617}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: Infinity
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Palm Breeze-MIDI Track 15
+  m_Markers:
+    m_Objects: []
+  template:
+    controls: []
+--- !u!114 &-7552445520395899614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69fd8133db33f2546993a421d269f5f6, type: 3}
+  m_Name: Midi Animation Track (15)
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 0
+    m_ClipIn: 0
+    m_Asset: {fileID: 4208165041040173895, guid: 1762e0cf17352144086b68560ce4fd13,
+      type: 3}
+    m_Duration: 162.6666717529297
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -7552445520395899614}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: Infinity
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Palm Breeze-MIDI Track 15
+  m_Markers:
+    m_Objects: []
+  template:
+    controls: []
+--- !u!114 &-6065530201693361410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a16748d9461eae46a725db9776d5390, type: 3}
+  m_Name: Markers
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
+  m_Name: Palm Breeze DirectorTimeline
+  m_EditorClassIdentifier: 
+  m_Version: 0
+  m_Tracks:
+  - {fileID: 7476981845889923334}
+  - {fileID: -7552445520395899614}
+  - {fileID: -8658110324994444388}
+  - {fileID: 4923441995762606856}
+  - {fileID: -8544812208850799617}
+  m_FixedDuration: 0
+  m_EditorSettings:
+    m_Framerate: 60
+  m_DurationMode: 0
+  m_MarkerTrack: {fileID: -6065530201693361410}
+--- !u!114 &21966542153722283
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: 61fda3a249cb13d45a7def607929fa11, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
+--- !u!114 &343437245299237505
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6c12d8ad7901a4e8468f23ed0a2dc2, type: 3}
+  m_Name: Palm Breeze-MIDI Track 15(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  template:
+    tempo: 90
+    duration: 23424
+    ticksPerQuarterNote: 96
+    events:
+    - time: 0
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 0
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 0
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 0
+      status: 188
+      data1: 101
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 100
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 6
+      data2: 12
+    - time: 0
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 0
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 0
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 0
+      status: 204
+      data1: 0
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 101
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 100
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 6
+      data2: 12
+    - time: 0
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 0
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 0
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 0
+      status: 204
+      data1: 0
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 101
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 100
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 6
+      data2: 12
+    - time: 0
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 0
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 0
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 0
+      status: 204
+      data1: 0
+      data2: 0
+    - time: 1440
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1464
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1488
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1512
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1512
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1536
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1536
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1584
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1632
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1680
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1728
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1776
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1824
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1872
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1920
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1968
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2016
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2064
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2112
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2136
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2136
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2160
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2160
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 2208
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 2208
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2232
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2232
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2268
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2304
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2352
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2400
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2448
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2496
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2544
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2592
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2640
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2688
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2736
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2784
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2832
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2880
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2904
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2904
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2928
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2928
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 2976
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 2976
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3000
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3000
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3036
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3072
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3120
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3168
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3216
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3264
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3312
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3360
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3384
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3384
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3420
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3456
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3504
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3552
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3600
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3648
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3672
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3672
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3696
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3696
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 3744
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 3744
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3768
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3768
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3804
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3840
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3888
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3936
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3984
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4032
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4080
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4128
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4152
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4152
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4188
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4224
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4272
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4320
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4368
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4416
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4440
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4440
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4464
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4464
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 4512
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 4512
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4536
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4536
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4572
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4608
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4656
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4704
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4752
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4896
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4944
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4992
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5040
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5088
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5136
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5232
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 5280
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 5280
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 5328
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 5328
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5376
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5376
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5424
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5568
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5616
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5664
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5712
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5760
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5808
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5904
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5952
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6000
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 6048
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 6048
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 6096
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 6096
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6144
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6144
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6192
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6240
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6288
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6432
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6480
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6528
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6576
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6624
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6672
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6768
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 6816
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 6816
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 6864
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 6864
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6912
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6912
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6960
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7104
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7152
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7200
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7248
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7296
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7344
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7440
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7488
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7536
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 7584
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 7584
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 7632
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 7632
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7680
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7680
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7704
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7704
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7776
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7824
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7848
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7848
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7920
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7968
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 8016
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 8064
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8088
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8088
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8160
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8208
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8232
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8232
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8304
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8304
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 8352
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 8400
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 8448
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 8448
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8472
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8472
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8544
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8592
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8616
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8616
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8688
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8736
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8760
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8760
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8832
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8832
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8880
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8928
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8976
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9024
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9072
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9120
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 9168
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 9216
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9240
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9240
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9312
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9360
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9384
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9384
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9456
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9504
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 9552
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 9600
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9624
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9624
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9696
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9744
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9768
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9768
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9840
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9840
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 9888
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 9936
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 9984
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 9984
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10008
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10008
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10080
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10128
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10152
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10152
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10224
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10272
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10296
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10296
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10368
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10368
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10416
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10464
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10512
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10560
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10608
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10656
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 10704
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 10752
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10800
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10848
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 10896
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 10944
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10992
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11016
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11064
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11136
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11184
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11232
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 11280
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 11328
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 11376
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 11400
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 11448
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 11520
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11568
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11616
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 11664
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 11712
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11760
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11784
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11832
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11856
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 11904
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 11904
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11952
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12000
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12048
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12096
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12144
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 12168
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12216
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 12240
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12288
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12288
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12336
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12384
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12432
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 12480
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12528
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12552
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12600
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12672
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12720
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12768
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12816
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 12864
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12912
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 12936
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12984
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 13056
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13104
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13152
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 13200
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 13248
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13296
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13320
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13368
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13392
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 13440
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 13440
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13488
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13536
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13584
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13632
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 13680
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 13704
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 13752
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 13776
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13824
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13824
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13872
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14160
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 14208
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14208
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 14256
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14544
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 14592
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14592
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 14640
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14928
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 14976
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14976
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15024
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15264
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15288
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15312
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15336
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15336
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15360
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15360
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15408
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15456
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15504
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15552
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15600
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15648
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15696
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15744
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15792
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15840
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15888
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15936
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15960
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15960
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15984
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15984
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 16032
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 16032
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16056
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16056
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16092
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16128
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16176
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16224
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16272
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16320
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16368
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16416
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16464
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16512
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16560
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16608
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16656
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16704
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16728
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16728
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16752
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16752
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 16800
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 16800
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16824
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16824
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16860
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16896
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16944
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16992
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17040
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17184
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17232
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17280
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17328
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17376
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17424
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17520
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 17568
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 17568
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 17616
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 17616
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17664
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17664
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17712
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17760
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17808
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17952
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18000
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18048
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18096
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18144
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18192
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18288
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 18336
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 18336
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 18384
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 18384
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18432
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18432
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18480
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18528
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18576
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18720
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18768
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18816
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18864
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18912
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18960
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19056
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 19104
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 19104
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 19152
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 19152
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19200
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19200
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19248
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19296
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19344
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19488
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19536
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19584
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19632
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19680
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19728
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19824
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 19872
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 19872
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 19920
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 19920
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19968
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19968
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20016
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20064
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20112
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20160
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20208
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20256
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20304
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20352
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20400
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20448
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20496
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20544
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20568
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20568
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20592
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20592
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 20640
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 20640
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20664
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20664
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20700
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20736
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20784
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20832
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20880
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20928
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20976
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21024
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21072
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21120
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21168
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21216
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21264
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21312
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21336
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21336
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21360
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21360
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 21408
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 21408
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21432
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21432
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21468
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21504
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21552
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21600
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21648
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21696
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21744
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21792
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21816
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21816
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21852
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21888
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21936
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21984
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22032
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22080
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22104
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22104
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22128
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22128
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 22176
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 22176
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22200
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22200
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22236
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22272
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22320
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22368
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22416
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22464
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22512
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22560
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22584
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22584
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22620
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22656
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22704
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22752
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22800
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22848
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22872
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22872
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22896
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22896
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 22944
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 22944
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22968
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22968
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 23004
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 23040
+      status: 188
+      data1: 101
+      data2: 0
+    - time: 23040
+      status: 188
+      data1: 100
+      data2: 0
+    - time: 23040
+      status: 188
+      data1: 6
+      data2: 12
+    - time: 23040
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 23040
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 23040
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 23040
+      status: 204
+      data1: 0
+      data2: 0
+    - time: 23041
+      status: 188
+      data1: 101
+      data2: 0
+    - time: 23041
+      status: 188
+      data1: 100
+      data2: 0
+    - time: 23041
+      status: 188
+      data1: 6
+      data2: 12
+    - time: 23041
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 23041
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 23041
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 23041
+      status: 204
+      data1: 0
+      data2: 0
+--- !u!114 &2856353806784410514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6c12d8ad7901a4e8468f23ed0a2dc2, type: 3}
+  m_Name: Palm Breeze-MIDI Track 15(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  template:
+    tempo: 90
+    duration: 23424
+    ticksPerQuarterNote: 96
+    events:
+    - time: 0
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 0
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 0
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 0
+      status: 188
+      data1: 101
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 100
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 6
+      data2: 12
+    - time: 0
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 0
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 0
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 0
+      status: 204
+      data1: 0
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 101
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 100
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 6
+      data2: 12
+    - time: 0
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 0
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 0
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 0
+      status: 204
+      data1: 0
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 101
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 100
+      data2: 0
+    - time: 0
+      status: 188
+      data1: 6
+      data2: 12
+    - time: 0
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 0
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 0
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 0
+      status: 204
+      data1: 0
+      data2: 0
+    - time: 1440
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1464
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1488
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1512
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1512
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1536
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1536
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1584
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1632
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1680
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1728
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1776
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1824
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1872
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 1920
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 1968
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2016
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2064
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2112
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2136
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2136
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2160
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2160
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 2208
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 2208
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2232
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2232
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2268
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2304
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2352
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2400
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2448
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2496
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2544
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2592
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2640
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2688
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2736
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2784
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2832
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2880
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2904
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2904
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 2928
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 2928
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 2976
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 2976
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3000
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3000
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3036
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3072
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3120
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3168
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3216
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3264
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3312
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3360
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3384
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3384
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3420
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3456
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3504
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3552
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3600
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3648
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3672
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3672
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3696
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3696
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 3744
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 3744
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3768
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3768
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3804
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3840
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3888
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 3936
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 3984
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4032
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4080
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4128
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4152
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4152
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4188
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4224
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4272
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4320
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4368
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4416
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4440
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4440
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4464
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4464
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 4512
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 4512
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4536
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4536
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4572
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4608
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4656
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4704
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4752
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4896
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 4944
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 4992
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5040
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5088
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5136
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5232
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 5280
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 5280
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 5328
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 5328
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5376
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5376
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5424
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5568
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5616
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5664
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5712
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5760
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5808
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 5904
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 5952
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6000
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 6048
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 6048
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 6096
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 6096
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6144
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6144
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6192
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6240
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6288
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6432
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6480
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6528
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6576
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6624
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6672
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6768
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 6816
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 6816
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 6864
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 6864
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6912
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 6912
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 6960
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7104
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7152
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7200
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7248
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7296
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7344
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7440
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7488
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7536
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 7584
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 7584
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 7632
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 7632
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7680
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7680
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7704
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7704
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7776
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7824
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7848
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7848
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 7920
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 7968
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 8016
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 8064
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8088
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8088
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8160
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8208
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8232
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8232
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8304
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8304
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 8352
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 8400
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 8448
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 8448
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8472
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8472
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8544
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8592
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8616
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8616
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8688
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8736
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8760
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8760
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8832
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8832
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8880
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 8928
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 8976
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9024
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9072
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9120
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 9168
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 9216
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9240
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9240
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9312
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9360
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9384
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9384
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9456
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9504
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 9552
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 9600
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9624
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9624
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9696
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9744
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9768
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9768
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 9840
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 9840
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 9888
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 9936
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 9984
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 9984
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10008
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10008
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10080
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10128
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10152
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10152
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10224
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10272
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10296
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10296
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10368
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10368
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10416
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10464
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10512
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10560
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10608
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10656
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 10704
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 10752
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10800
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 10848
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 10896
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 10944
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 10992
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11016
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11064
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11136
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11184
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11232
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 11280
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 11328
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 11376
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 11400
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 11448
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 11520
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11568
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11616
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 11664
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 11712
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11760
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11784
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11832
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 11856
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 11904
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 11904
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 11952
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12000
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12048
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12096
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12144
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 12168
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12216
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 12240
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12288
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12288
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12336
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12384
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12432
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 12480
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12528
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12552
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12600
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12672
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 12720
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 12768
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12816
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 12864
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12912
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 12936
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 12984
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 13056
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13104
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13152
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 13200
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 13248
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13296
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13320
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13368
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13392
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 13440
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 13440
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13488
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13536
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13584
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13632
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 13680
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 13704
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 13752
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 13776
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13824
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 13824
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 13872
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14160
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 14208
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14208
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 14256
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14544
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 14592
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14592
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 14640
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14928
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 14976
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 14976
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15024
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15264
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15288
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15312
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15336
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15336
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15360
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15360
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15408
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15456
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15504
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15552
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15600
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15648
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15696
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15744
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15792
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15840
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15888
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15936
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15960
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15960
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 15984
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 15984
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 16032
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 16032
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16056
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16056
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16092
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16128
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16176
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16224
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16272
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16320
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16368
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16416
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16464
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16512
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16560
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16608
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16656
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16704
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16728
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16728
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16752
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16752
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 16800
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 16800
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16824
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16824
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16860
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16896
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 16944
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 16992
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17040
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17184
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17232
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17280
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17328
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17376
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17424
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17520
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 17568
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 17568
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 17616
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 17616
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17664
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17664
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17712
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17760
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 17808
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 17952
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18000
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18048
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18096
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18144
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18192
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18288
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 18336
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 18336
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 18384
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 18384
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18432
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18432
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18480
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18528
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18576
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18720
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18768
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18816
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18864
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 18912
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 18960
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19056
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 19104
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 19104
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 19152
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 19152
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19200
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19200
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19248
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19296
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19344
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19488
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19536
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19584
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19632
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19680
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19728
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19824
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 19872
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 19872
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 19920
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 19920
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 19968
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 19968
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20016
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20064
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20112
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20160
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20208
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20256
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20304
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20352
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20400
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20448
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20496
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20544
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20568
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20568
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20592
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20592
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 20640
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 20640
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20664
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20664
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20700
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20736
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20784
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20832
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20880
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 20928
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 20976
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21024
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21072
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21120
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21168
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21216
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21264
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21312
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21336
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21336
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21360
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21360
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 21408
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 21408
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21432
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21432
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21468
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21504
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21552
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21600
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21648
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21696
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21744
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21792
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21816
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21816
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21852
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21888
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 21936
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 21984
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22032
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22080
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22104
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22104
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22128
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22128
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 22176
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 22176
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22200
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22200
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22236
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22272
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22320
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22368
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22416
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22464
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22512
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22560
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22584
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22584
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22620
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22656
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22704
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22752
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22800
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22848
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22872
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22872
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22896
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22896
+      status: 156
+      data1: 51
+      data2: 100
+    - time: 22944
+      status: 140
+      data1: 51
+      data2: 64
+    - time: 22944
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 22968
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 22968
+      status: 156
+      data1: 49
+      data2: 100
+    - time: 23004
+      status: 140
+      data1: 49
+      data2: 64
+    - time: 23040
+      status: 188
+      data1: 101
+      data2: 0
+    - time: 23040
+      status: 188
+      data1: 100
+      data2: 0
+    - time: 23040
+      status: 188
+      data1: 6
+      data2: 12
+    - time: 23040
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 23040
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 23040
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 23040
+      status: 204
+      data1: 0
+      data2: 0
+    - time: 23041
+      status: 188
+      data1: 101
+      data2: 0
+    - time: 23041
+      status: 188
+      data1: 100
+      data2: 0
+    - time: 23041
+      status: 188
+      data1: 6
+      data2: 12
+    - time: 23041
+      status: 188
+      data1: 10
+      data2: 64
+    - time: 23041
+      status: 188
+      data1: 7
+      data2: 100
+    - time: 23041
+      status: 236
+      data1: 0
+      data2: 64
+    - time: 23041
+      status: 204
+      data1: 0
+      data2: 0
+--- !u!114 &4923441995762606856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69fd8133db33f2546993a421d269f5f6, type: 3}
+  m_Name: Midi Animation Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 0
+    m_ClipIn: 0
+    m_Asset: {fileID: 343437245299237505}
+    m_Duration: 162.6666717529297
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4923441995762606856}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: Infinity
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Palm Breeze-MIDI Track 15
+  m_Markers:
+    m_Objects: []
+  template:
+    controls: []
+--- !u!114 &7070138411646475629
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: a543781dfa02f0c40b30607eb48b48a2, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
+--- !u!114 &7476981845889923334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b22792c3b570444eb18cb78c2af3a74, type: 3}
+  m_Name: Audio Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 1
+    m_ClipIn: 0
+    m_Asset: {fileID: 21966542153722283}
+    m_Duration: 160.8958276643991
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 7476981845889923334}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Palm Breeze-Instrument
+  m_Markers:
+    m_Objects: []
+  m_TrackProperties:
+    volume: 1
+    stereoPan: 0
+    spatialBlend: 0

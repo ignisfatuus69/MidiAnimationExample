@@ -211,7 +211,7 @@ public class Beat : MonoBehaviour
     IEnumerator DelayAnimationSetters()
     {
         yield return new WaitForSeconds(0.05f);
-        StartCoroutine(ScaleBeatBasedOnTime(RingTransform, new Vector3(0.87f, 0.87f, 0.87f), SequencerRef.OffSetBeatTime - (SequencerRef.OffSetBeatTime/4)));
+        StartCoroutine(ScaleBeatBasedOnTime(RingTransform, new Vector3(0.87f, 0.87f, 0.87f), SequencerRef.OffSetBeatTime - (SequencerRef.OffSetBeatTime/8)));
         StartCoroutine(SetBeatColorBasedOnTime(BeatSpriteRenderer, new Vector4(1, 1, 1, 1), SequencerRef.OffSetBeatTime * 1.25f));
         StartCoroutine(SetRingColorBasedOnTime(RingSpriteRenderer, new Vector4(1, 1, 1, 1), SequencerRef.OffSetBeatTime * 1.25f));
     }

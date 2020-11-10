@@ -44,11 +44,14 @@ public class Sequencer : MonoBehaviour
     private void Update()
     {
 
-        //We can have an offset time for the beats to spawn
-        if (PlayableDirectorObj.time >= BeatSequencerInfo.TimeStampsNumbers[index])
+        if (index < BeatSequencerInfo.TimeStampsNumbers.Count)
         {
-            BeatSpawnerObj.SpawnObjects();
-            index += 1;
+            //We can have an offset time for the beats to spawn
+            if (PlayableDirectorObj.time >= BeatSequencerInfo.TimeStampsNumbers[index])
+            {
+                BeatSpawnerObj.SpawnObjects();
+                index += 1;
+            }
         }
     }
 
@@ -66,4 +69,5 @@ public class Sequencer : MonoBehaviour
         CurrentInteractedBeatIndex += 1;
     }
 
+ 
 }

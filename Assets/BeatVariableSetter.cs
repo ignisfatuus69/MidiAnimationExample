@@ -26,7 +26,7 @@ public class BeatVariableSetter : MonoBehaviour
 
     public void CountBeat()
     {
-        Debug.Log("parechong nagbibilang");
+        Debug.Log("count");
         BeatSequencerInfo.TimeStampsNumbers.Add(PlayableDirectorObj.time);
    
         if (BeatSequencerInfo.TimeStampsNumbers.Count>= TotalBeatCount)
